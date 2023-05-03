@@ -11,19 +11,26 @@ const mainMenu = [
 const convertToDoubleDigit = (number: number) => {
   return number < 10 ? `0${number}` : number;
 };
-export default function Layout() {
+export default function Layout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
-    <nav>
-      <ul>
-        {mainMenu.map((item, index) => (
-          <li key={item.name} className="uppercase mx-5">
-            <Link href={item.path} key={item.name}>
-              <span className="mr-3">{convertToDoubleDigit(index)}</span>
-              {item.name}
-            </Link>
-          </li>
-        ))}
-      </ul>
-    </nav>
+    <div className="">
+      <nav>
+        <ul>
+          {mainMenu.map((item, index) => (
+            <li key={item.name} className="uppercase mx-5">
+              <Link href={item.path} key={item.name}>
+                <span className="mr-3">{convertToDoubleDigit(index)}</span>
+                {item.name}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </nav>
+      <main>{children}</main>
+    </div>
   );
 }
