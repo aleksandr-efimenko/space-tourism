@@ -3,3 +3,7 @@
 @tailwind utilities;
 
 
+:root {
+    --color-darkspace: hsla(230, 35%, 7%, 1);
+    --color-paleblue: hsla(231, 77%, 90%, 1);
+}
