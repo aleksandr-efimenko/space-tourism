@@ -9,8 +9,13 @@ module.exports = {
   ],
   theme: {
     extend: {
+      colors: {
+        darkspace: 'var(--color-darkspace)',
+        paleblue: 'var(-color-paleblue)',
+      },
       fontFamily: {
-        sans: ['var(--font-bellfair)', ...fontFamily.sans],
+        bellfair: ['var(--font-bellfair)', ...fontFamily.sans],
+        barlow: ['var(--font-barlow-condensed)', ...fontFamily.sans],
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',

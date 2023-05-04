@@ -30,8 +30,8 @@ export default function Layout({
 }) {
   return (
     <div className={`${bellefair.variable} ${barlowCondensed.variable}`}>
-      <nav className="my-10">
-        <ul className="flex gap-12 justify-between w-4/5">
+      <nav className=" text-white relative top-10">
+        <ul className="absolute flex gap-12 justify-between uppercase font-barlow w-4/5">
           {mainMenu.map((item, index) => (
             <li key={item.name}>
               <Link href={item.path} key={item.name} className="flex gap-3" >
