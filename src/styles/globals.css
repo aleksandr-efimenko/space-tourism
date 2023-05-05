@@ -7,3 +7,23 @@
     --color-darkspace: hsla(230, 35%, 7%, 1);
     --color-paleblue: hsla(231, 77%, 90%, 1);
 }
+
+@layer components {
+    .heading1 {
+        @apply font-bellfair uppercase text-[9.375rem] leading-[10.75rem];
+    }
+    .heading2 {
+        @apply font-bellfair uppercase text-[6.25rem] leading-[7.1875rem];
+    }
+    .heading3 {
+        @apply font-bellfair uppercase text-[3.5rem] leading-[4rem];
+    }
+    .heading4 {
+        @apply font-bellfair uppercase text-[2rem] leading-[2.3125rem];
+    }
+    .heading5 {
+        @apply font-barlow uppercase text-[1.75rem] leading-[2.125rem] tracking-[0.2969rem];
+    }
+
+
+}
