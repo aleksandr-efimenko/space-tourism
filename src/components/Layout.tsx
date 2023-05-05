@@ -1,11 +1,17 @@
 import Link from "next/link";
-import { Bellefair, Barlow_Condensed } from "next/font/google";
+import { Bellefair, Barlow, Barlow_Condensed } from "next/font/google";
 import Image from "next/image";
 import logo from "~/assets/shared/logo.svg";
 
 const bellefair = Bellefair({
   subsets: ["latin"],
   variable: "--font-bellfair",
+  weight: ["400"],
+});
+
+const barlow = Barlow({
+  subsets: ["latin"],
+  variable: "--font-barlow",
   weight: ["400"],
 });
 
@@ -28,12 +34,12 @@ const convertToDoubleDigit = (number: number) => {
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
-    <div className={`${bellefair.variable} ${barlowCondensed.variable}`}>
-      <nav className=" text-white relative top-10 flex">
+    <div className={`${bellefair.variable} ${barlowCondensed.variable} ${barlow.variable}`}>
+      <nav className=" text-white relative top-10 flex items-center">
         <div className=" rounded-full bg-white">
           <Image src={logo} alt="logo" width={50} height={50} />
         </div>
-        <ul className="absolute flex gap-12 justify-between uppercase font-barlow w-4/5">
+        <ul className="flex gap-12 justify-between nav-text">
           {mainMenu.map((item, index) => (
             <li key={item.name}>
               <Link href={item.path} key={item.name} className="flex gap-3">

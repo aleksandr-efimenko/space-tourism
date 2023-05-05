@@ -22,7 +22,19 @@
         @apply font-bellfair uppercase text-[2rem] leading-[2.3125rem];
     }
     .heading5 {
-        @apply font-barlow uppercase text-[1.75rem] leading-[2.125rem] tracking-[0.2969rem];
+        @apply font-barlowcon uppercase text-[1.75rem] leading-[2.125rem] tracking-[0.2969rem] text-paleblue;
+    }
+    .subheading1 {
+        @apply font-bellfair uppercase text-[1.75rem] leading-[2rem];
+    }
+    .subheading2 {
+        @apply font-bellfair uppercase text-sm leading-[1.0625rem] tracking-[0.1475rem];
+    }
+    .nav-text {
+        @apply font-barlowcon uppercase text-base leading-[1.1875rem] tracking-[0.1688rem];
+    }
+    .body-text {
+        @apply font-barlow text-lg leading-[2rem];
     }
 
 
