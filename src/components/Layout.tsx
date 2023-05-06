@@ -35,7 +35,7 @@ const convertToDoubleDigit = (number: number) => {
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <div className={`${bellefair.variable} ${barlowCondensed.variable} ${barlow.variable}`}>
-      <nav className=" text-white relative top-10 flex items-center">
+      <nav className=" text-white absolute top-10 flex items-center">
         <div className=" rounded-full bg-white">
           <Image src={logo} alt="logo" width={50} height={50} />
         </div>
