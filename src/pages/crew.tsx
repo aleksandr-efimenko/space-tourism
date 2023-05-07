@@ -1,14 +1,14 @@
 import BackgroundImage from "@/components/BackgroundImage";
+import WhiteDotsSlider from "@/components/WhiteDotsSlider";
 import data from "@/data/data.json";
 import Image from "next/image";
 import { useState } from "react";
 import backgroundImage from "~/assets/crew/background-crew-desktop.jpg";
 
-export default function crew() {
+export default function Crew() {
   const { crew } = data;
-  const [crewMember, setCrewMember] = useState(crew[0]);
+  const [crewMemberIndex, setCrewMemberIndex] = useState(0);
 
-  const crewImage = crewMember.images.webp.slice(1);
   return (
     <>
       <BackgroundImage
@@ -22,17 +22,23 @@ export default function crew() {
             <p className="heading5 text-white"> Meet your crew</p>
           </h1>
           <p className="heading4 opacity-50 text-white">
-            {crewMember.role}
+            {crew[crewMemberIndex].role}
           </p>
-          <h3 className="heading3 text-white">
-            {crewMember.name}
-          </h3>
-          <p className="text-paleblue">
-            {crewMember.bio}
-          </p>
+          <h3 className="heading3 text-white">{crew[crewMemberIndex].name}</h3>
+          <p className="text-paleblue">{crew[crewMemberIndex].bio}</p>
+          <WhiteDotsSlider
+            setIndex={setCrewMemberIndex}
+            index={crewMemberIndex}
+            dotsNumber={crew.length}
+          />
         </div>
         <div className="">
-          <Image src={crewImage} alt="crew member" width={400} height={400} />
+          <Image
+            src={crew[crewMemberIndex].images.webp}
+            alt="crew member"
+            width={400}
+            height={400}
+          />
         </div>
       </div>
     </>
