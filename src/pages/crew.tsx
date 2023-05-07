@@ -3,13 +3,19 @@ import WhiteDotsSlider from "@/components/WhiteDotsSlider";
 import data from "@/data/data.json";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import backgroundImage from "~/assets/crew/background-crew-desktop.jpg";
 
 export default function Crew() {
   const { crew } = data;
   const [crewMemberIndex, setCrewMemberIndex] = useState(0);
 
+  // useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     setCrewMemberIndex((prev) => (prev + 1) % crew.length);
+  //   }, 5000);
+  //   return () => clearInterval(interval);
+  // }, [crew]);
   return (
     <>
       <BackgroundImage
@@ -17,10 +23,10 @@ export default function Crew() {
         alt="background image"
       />
 
-      <div className="pt-32 flex">
+      <div className="pt-32 flex justify-center item w-full">
         <AnimatePresence>
           <motion.div
-            className=""
+            className="flex-1"
             key={crewMemberIndex}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -67,7 +73,7 @@ export default function Crew() {
         <AnimatePresence>
           <motion.div
             key={crewMemberIndex}
-            className=""
+            className="flex-1"
             initial={{ x: "-10vw", opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.5 }}

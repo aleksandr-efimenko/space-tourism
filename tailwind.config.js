@@ -12,6 +12,7 @@ module.exports = {
       colors: {
         darkspace: "var(--color-darkspace)",
         paleblue: "var(--color-paleblue)",
+        gray: "var(--color-gray)",
       },
       fontFamily: {
         bellfair: ["var(--font-bellfair)", ...fontFamily.sans],
