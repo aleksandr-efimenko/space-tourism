@@ -2,6 +2,7 @@ import Link from "next/link";
 import { Bellefair, Barlow, Barlow_Condensed } from "next/font/google";
 import Image from "next/image";
 import logo from "~/assets/shared/logo.svg";
+import { useRouter } from "next/router";
 
 const bellefair = Bellefair({
   subsets: ["latin"],
@@ -33,8 +34,17 @@ const convertToDoubleDigit = (number: number) => {
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {
+  const router = useRouter();
+  const underlineIfActive = (path: string) => {
+    const underlineStyle =
+      "border-b-[0.1875rem] border-white pb-[2.1875rem]";
+    return router.pathname === path ? underlineStyle : "";
+  };
+
   return (
-    <div className={`${bellefair.variable} ${barlowCondensed.variable} ${barlow.variable}`}>
+    <div
+      className={`${bellefair.variable} ${barlowCondensed.variable} ${barlow.variable}`}
+    >
       <nav className=" text-white absolute top-10 flex items-center">
         <div className=" rounded-full bg-white">
           <Image src={logo} alt="logo" width={50} height={50} />
@@ -42,9 +52,9 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         <ul className="flex gap-12 justify-between nav-text">
           {mainMenu.map((item, index) => (
             <li key={item.name}>
-              <Link href={item.path} key={item.name} className="flex gap-3">
+              <Link href={item.path} key={item.name} className={`flex gap-3 ${underlineIfActive(item.path)}`}>
                 <span>{convertToDoubleDigit(index)}</span>
-                <p>{item.name}</p>
+                <p >{item.name}</p>
               </Link>
             </li>
           ))}
