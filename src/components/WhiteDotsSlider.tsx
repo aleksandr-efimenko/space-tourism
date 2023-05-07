@@ -1,3 +1,6 @@
+import { motion } from "framer-motion";
+
+
 export default function WhiteDotsSlider({
   dotsNumber,
   index,
@@ -10,10 +13,11 @@ export default function WhiteDotsSlider({
   return (
     <div className="flex gap-6 justify-center items-center">
       {Array.from(Array(dotsNumber).keys()).map((i) => (
-        <div
+        <motion.div
+        whileHover={{ scale: 1.5}}
           key={i}
-          className={`w-[15px] h-[15px] rounded-full bg-white cursor-pointer  ${
-            index === i ? " opacity-[0.17]" : ""
+          className={`w-[15px] h-[15px] rounded-full bg-white cursor-pointer ] ${
+            index === i ? " opacity-1" : "opacity-[0.17]"
           }`}
           onClick={() => setIndex(i)}
         />
