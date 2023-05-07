@@ -14,6 +14,7 @@ export default function NumberedSlider({
       {Array.from(Array(itemsNumber).keys()).map((i) => (
         <Link
           href="#"
+          onClick={() => setIndex(i)}
           key={i}
           className={`heading4 cursor-pointer hover:border-opacity-1 hover:border-white
           flex justify-center items-center w-20 h-20 border border-white border-opacity-25 rounded-full
