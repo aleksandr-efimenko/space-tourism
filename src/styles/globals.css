@@ -37,6 +37,8 @@
     .body-text {
         @apply font-barlow text-lg leading-[2rem];
     }
-
+    .backdrop {
+        backdrop-filter: blur(40.7742px);
+    }
 
 }

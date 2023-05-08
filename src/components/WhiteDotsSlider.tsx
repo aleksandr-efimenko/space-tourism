@@ -1,27 +1,27 @@
-import { motion } from "framer-motion";
-
+import { motion } from 'framer-motion'
+import { NumberedSliderProps } from '@/utils/SliderProps'
 
 export default function WhiteDotsSlider({
-  dotsNumber,
-  index,
+  itemsNumber,
+  currentIndex,
   setIndex,
-}: {
-  dotsNumber: number;
-  index: number;
-  setIndex: (index: number) => void;
-}) {
+}: NumberedSliderProps) {
+  const items = Array.from(Array(itemsNumber).keys())
   return (
-    <div className="flex gap-6 justify-center items-center">
-      {Array.from(Array(dotsNumber).keys()).map((i) => (
+    <div className='flex gap-6 justify-center items-center'>
+      {items.map((index) => (
         <motion.div
-        whileHover={{ scale: 1.5}}
-          key={i}
-          className={`w-[15px] h-[15px] rounded-full bg-white cursor-pointer ] ${
-            index === i ? " opacity-1" : "opacity-[0.17]"
+          whileHover={{ scale: 1.2 }}
+          key={index}
+          className={`w-[15px] h-[15px] rounded-full bg-white cursor-pointer 
+          ${
+            currentIndex === index
+              ? 'opacity-1'
+              : 'opacity-[0.17]  hover:opacity-50'
           }`}
-          onClick={() => setIndex(i)}
+          onClick={() => setIndex(index)}
         />
       ))}
     </div>
-  );
+  )
 }

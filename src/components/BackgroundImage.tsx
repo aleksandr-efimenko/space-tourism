@@ -1,24 +1,24 @@
-import Image, { StaticImageData } from "next/image";
+import Image, { StaticImageData } from 'next/image'
 
-export default function BackgroundImage({
-  backgroundImage,
-  alt,
-}: {
-  backgroundImage: StaticImageData;
-  alt: string;
-}) {
+type BackgroundImageProps = {
+  backgroundImage: string | undefined
+  alt: string
+}
+
+export function BackgroundImage({ backgroundImage, alt }: BackgroundImageProps) {
+  const defaultBackgroundImage = '/assets/home/background-home-desktop.jpg'
   return (
-    <div className="absolute inset-0 -z-10">
+    <div className='absolute inset-0 -z-10'>
       <Image
         priority
-        src={backgroundImage}
-        alt="background image"
+        src={backgroundImage ? backgroundImage : defaultBackgroundImage}
+        alt={alt}
         style={{
-          objectFit: "cover",
-          objectPosition: "center",
+          objectFit: 'cover',
+          objectPosition: 'center',
         }}
         fill
       />
     </div>
-  );
+  )
 }
