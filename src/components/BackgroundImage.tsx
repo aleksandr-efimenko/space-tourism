@@ -1,7 +1,7 @@
 import Image, { StaticImageData } from 'next/image'
 
 type BackgroundImageProps = {
-  backgroundImage: string | undefined
+  backgroundImage: string | StaticImageData | undefined
   alt: string
 }
 

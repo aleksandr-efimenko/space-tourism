@@ -1,23 +1,20 @@
-import { SliderProps } from '@/utils/SliderProps'
+import { NumberedSliderProps } from '@/utils/SliderProps'
 import Link from 'next/link'
 
-export default function NumberedSlider({
-  itemsNumber,
-  index,
-  setIndex,
-}: SliderProps) {
+export function NumberedSlider({ itemsNumber, currentIndex, setIndex }: NumberedSliderProps) {
+  const items = Array.from(Array(itemsNumber).keys())
   return (
     <div className='flex flex-col gap-8'>
-      {Array.from(Array(itemsNumber).keys()).map((i) => (
+      {items.map((index) => (
         <Link
           href='#'
-          onClick={() => setIndex(i)}
-          key={i}
+          onClick={() => setIndex(index)}
+          key={index}
           className={`heading4 cursor-pointer hover:border-opacity-1 hover:border-white
           flex justify-center items-center w-20 h-20 border border-white border-opacity-25 rounded-full
-          ${i === index ? ' bg-white text-darkspace ' : ''}`}
+          ${index === currentIndex ? ' bg-white text-darkspace ' : ''}`}
         >
-          {i + 1}
+          {index + 1}
         </Link>
       ))}
     </div>

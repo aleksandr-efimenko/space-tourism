@@ -1,7 +1,7 @@
-import WhiteDotsSlider from '@/components/WhiteDotsSlider'
 import data from '@/data/data.json'
-import { motion, AnimatePresence } from 'framer-motion'
 import Image from 'next/image'
+import { WhiteDotsSlider } from '@/components/WhiteDotsSlider'
+import { motion, AnimatePresence } from 'framer-motion'
 import { useEffect, useState } from 'react'
 
 export default function Crew() {
@@ -70,21 +70,12 @@ export default function Crew() {
             transition={{ duration: 0.5 }}
             // exit={{}}
           >
-            <Image
-              src={crew[crewMemberIndex].images.webp}
-              alt='crew member'
-              width={400}
-              height={400}
-            />
+            <Image src={crew[crewMemberIndex].images.webp} alt='crew member' width={400} height={400} />
           </motion.div>
         </AnimatePresence>
       </div>
       <div className='absolute bottom-10'>
-        <WhiteDotsSlider
-          setIndex={setCrewMemberIndex}
-          currentIndex={crewMemberIndex}
-          itemsNumber={crew.length}
-        />
+        <WhiteDotsSlider setIndex={setCrewMemberIndex} currentIndex={crewMemberIndex} itemsNumber={crew.length} />
       </div>
     </>
   )

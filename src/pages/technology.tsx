@@ -1,4 +1,4 @@
-import NumberedSlider from '@/components/NumberedSlider'
+import { NumberedSlider } from '@/components/NumberedSlider'
 import data from '@/data/data.json'
 import { useState } from 'react'
 import Image from 'next/image'
@@ -23,17 +23,10 @@ export default function Technology() {
           <div className='ml-20 flex-1'>
             <p className='nav-text text-paleblue'>THE TERMINOLOGY…</p>
             <h2 className='heading2'>{technology[technologyIndex].name}</h2>
-            <p className='text-paleblue'>
-              {technology[technologyIndex].description}
-            </p>
+            <p className='text-paleblue'>{technology[technologyIndex].description}</p>
           </div>
           <div className=''>
-            <Image
-              alt='space explorer'
-              src={technology[technologyIndex].images.portrait}
-              width={515}
-              height={527}
-            />
+            <Image alt='space explorer' src={technology[technologyIndex].images.portrait} width={515} height={527} />
           </div>
         </div>
       </div>
