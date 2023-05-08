@@ -2,43 +2,45 @@
 @tailwind components;
 @tailwind utilities;
 
-
 :root {
-    --color-darkspace: hsla(230, 35%, 7%, 1);
-    --color-paleblue: hsla(231, 77%, 90%, 1);
-    --color-gray: hsla(231, 15%, 26%, 1);
+  --color-darkspace: hsla(230, 35%, 7%, 1);
+  --color-paleblue: hsla(231, 77%, 90%, 1);
+  --color-gray: hsla(231, 15%, 26%, 1);
 }
 
 @layer components {
-    .heading1 {
-        @apply font-bellfair uppercase text-[9.375rem] leading-[10.75rem];
-    }
-    .heading2 {
-        @apply font-bellfair uppercase text-[6.25rem] leading-[7.1875rem];
-    }
-    .heading3 {
-        @apply font-bellfair uppercase text-[3.5rem] leading-[4rem];
-    }
-    .heading4 {
-        @apply font-bellfair uppercase text-[2rem] leading-[2.3125rem];
-    }
-    .heading5 {
-        @apply font-barlowcon uppercase text-[1.75rem] leading-[2.125rem] tracking-[0.2969rem] text-paleblue;
-    }
-    .subheading1 {
-        @apply font-bellfair uppercase text-[1.75rem] leading-[2rem];
-    }
-    .subheading2 {
-        @apply font-barlowcon uppercase text-sm leading-[1.0625rem] tracking-[0.1475rem];
-    }
-    .nav-text {
-        @apply font-barlowcon uppercase text-base leading-[1.1875rem] tracking-[0.1688rem];
-    }
-    .body-text {
-        @apply font-barlow text-lg leading-[2rem];
-    }
-    .backdrop {
-        backdrop-filter: blur(40.7742px);
-    }
-
+  .heading1 {
+    @apply font-bellfair uppercase text-[9.375rem] leading-[10.75rem];
+  }
+  .heading2 {
+    @apply font-bellfair uppercase text-[6.25rem] leading-[7.1875rem];
+  }
+  .heading3 {
+    @apply font-bellfair uppercase text-[3.5rem] leading-[4rem];
+  }
+  .heading4 {
+    @apply font-bellfair uppercase  
+                text-xl leading-6 
+                md:text-[2rem] md:leading-[2.3125rem];
+  }
+  .heading5 {
+    @apply font-barlowcon uppercase text-[1.75rem] leading-[2.125rem] tracking-[0.2969rem] text-paleblue;
+  }
+  .subheading1 {
+    @apply font-bellfair uppercase text-[1.75rem] leading-[2rem];
+  }
+  .subheading2 {
+    @apply font-barlowcon uppercase text-sm leading-[1.0625rem] tracking-[0.1475rem];
+  }
+  .nav-text {
+    @apply font-barlowcon uppercase text-base leading-[1.1875rem] tracking-[0.1688rem];
+  }
+  .body-text {
+    @apply font-barlow text-lg leading-[2rem];
+  }
+  .backdrop {
+    backdrop-filter: blur(40.7742px);
+  }
+  .page-container {
+  }
 }
