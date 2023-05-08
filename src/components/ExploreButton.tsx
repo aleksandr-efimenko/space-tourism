@@ -1,7 +1,17 @@
 import { motion } from 'framer-motion'
-import Link from 'next/link'
+import { isMobile } from 'react-device-detect'
 
 export function ExploreButton() {
+  const whilteHoverStyle = {
+    outlineColor: 'hsla(0, 0%, 100%, 0.1)',
+    outlineStyle: 'solid',
+    outlineWidth: isMobile ? '1rem' : '4rem',
+  }
+  const whileTapStyle = {
+    scale: 1.1,
+    outlineWidth: isMobile ? '1rem' : '3rem',
+  }
+
   return (
     <motion.a
       href='#'
@@ -10,15 +20,8 @@ export function ExploreButton() {
                 md:w-[15.125rem] md:h-[15.125rem] 
                 w-[9.375rem] h-[9.375rem] 
                 '
-      whileHover={{
-        outlineColor: 'hsla(0, 0%, 100%, 0.1)',
-        outlineStyle: 'solid',
-        outlineWidth: '4rem',
-      }}
-      whileTap={{
-        scale: 1.1,
-        outlineWidth: '3rem',
-      }}
+      whileHover={whilteHoverStyle}
+      whileTap={whileTapStyle}
     >
       <p className='heading4 md:tracking-[0.125rem] trackin-[0.0781rem] text-darkspace'>EXPLORE</p>
     </motion.a>
