@@ -22,7 +22,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
         </Link>
         <MainMenu />
       </header>
-      <main className='container'>{children}</main>
+      <main className=''>{children}</main>
       <BackgroundImage backgroundImage={backgroundImage} alt='background image' />
     </div>
   )
