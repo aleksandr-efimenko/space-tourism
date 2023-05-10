@@ -4,7 +4,7 @@ import { motion } from 'framer-motion'
 export default function Home() {
   return (
     <>
-      <div className={`grid grid-cols-12 min-h-screen w-full items-end justify-between py-[8.1875rem]`}>
+      <div className={`page-container min-h-screen w-full items-end justify-between py-[8.1875rem]`}>
         <div className='flex flex-col col-start-2 col-end-7'>
           <motion.p animate={{ opacity: 1 }} initial={{ opacity: 0 }} transition={{ delay: 0.2 }} className='heading5'>
             SO, YOU WANT TO TRAVEL TO

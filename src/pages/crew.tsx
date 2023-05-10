@@ -16,9 +16,9 @@ export default function Crew() {
   }, [crew])
   return (
     <>
-      <div className='grid gap-16 grid-cols-12 min-h-screen justify-center items-end w-full'>
+      <div className='page-container justify-center items-end w-full'>
         <motion.div
-          className='pt-32 pb-24 col-start-2 col-end-7 min-h-screen flex flex-col 
+          className='pt-32 pb-24 col-start-2 col-end-8 min-h-screen flex flex-col 
             justify-self-center justify-between items-start'
           key={crewMemberIndex + crew[crewMemberIndex].name}
         >
@@ -46,7 +46,7 @@ export default function Crew() {
               {crew[crewMemberIndex].name}
             </motion.h3>
             <motion.p
-              className='text-paleblue'
+              className='text-paleblue max-w-[70%]'
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.8 }}
@@ -61,12 +61,12 @@ export default function Crew() {
 
         <motion.div
           key={crewMemberIndex}
-          className='col-start-7 col-end-12 justify-self-end h-4/5 flex flex-col justify-end'
+          className='col-start-8 col-end-12 justify-self-start h-4/5 flex flex-col justify-end'
           initial={{ x: '5rem', opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 0.5 }}
         >
-          <Image priority src={crew[crewMemberIndex].images.webp} alt='crew member' width={400} height={500} />
+          <Image priority src={crew[crewMemberIndex].images.webp} alt='crew member' width={480} height={700} />
         </motion.div>
       </div>
     </>
