@@ -1,5 +1,5 @@
 import data from '@/data/data.json'
-import { useState } from 'react'
+import { use, useEffect, useState } from 'react'
 import Image from 'next/image'
 import { TextSlider } from '@/components/TextSlider'
 import { PlanetInfoColumn } from '@/components/PlanetInfoColumn'
@@ -8,10 +8,16 @@ import { motion } from 'framer-motion'
 export default function Destination() {
   const { destinations } = data
   const [destinationIndex, setDestinationIndex] = useState(0)
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setDestinationIndex((prev) => (prev + 1) % destinations.length)
+    }, 5000)
+    return () => clearInterval(interval)
+  }, [destinations])
 
   return (
     <>
-      <div className='page-container pt-32 w-full'>
+      <div className='page-container pt-52 w-full'>
         <div className='col-start-2 col-end-6 flex flex-col'>
           <h1 className='flex gap-6'>
             <span className='heading5 font-bold opacity-25 '>01</span>
@@ -28,7 +34,7 @@ export default function Destination() {
           </motion.div>
         </div>
 
-        <div className='flex flex-col mt-28 col-start-7 col-end-12'>
+        <div className='flex flex-col mt-16 col-start-7 col-end-12'>
           <TextSlider
             items={destinations.map((item) => item.name)}
             currentIndex={destinationIndex}
