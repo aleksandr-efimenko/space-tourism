@@ -24,7 +24,7 @@
                 md:text-[2rem] md:leading-[2.3125rem];
   }
   .heading5 {
-    @apply font-barlowcon uppercase text-[1.75rem] leading-[2.125rem] tracking-[0.2969rem] text-paleblue;
+    @apply font-barlowcon uppercase text-[1.75rem] leading-[2.125rem] tracking-[0.2969rem];
   }
   .subheading1 {
     @apply font-bellfair uppercase text-[1.75rem] leading-[2rem];
@@ -42,5 +42,8 @@
     backdrop-filter: blur(40.7742px);
   }
   .page-container {
+    @apply min-h-screen;
+    display: grid;
+    grid-template-columns: minmax(11rem, 1fr) repeat(10, minmax(0, 1fr)) minmax(11rem, 1fr);
   }
 }
