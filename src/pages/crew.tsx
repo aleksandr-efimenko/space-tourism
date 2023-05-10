@@ -18,7 +18,7 @@ export default function Crew() {
     <>
       <div className='page-container justify-center items-end w-full'>
         <motion.div
-          className='pt-32 pb-24 col-start-2 col-end-8 min-h-screen flex flex-col 
+          className='pt-52 pb-24 col-start-2 col-end-8 min-h-screen flex flex-col 
             justify-self-center justify-between items-start'
           key={crewMemberIndex + crew[crewMemberIndex].name}
         >
