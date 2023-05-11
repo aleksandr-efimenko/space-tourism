@@ -16,10 +16,11 @@ export function Layout({ children }: { children: React.ReactNode }) {
 
   return (
     <div className={`${bellefair.variable} ${barlowCondensed.variable} ${barlow.variable} text-white`}>
-      <header className='absolute top-10 h-24 flex items-center justify-between w-full'>
-        <Link href='/' className='rounded-full bg-white h-fit'>
+      <header className='absolute top-10 pl-14 flex items-center justify-between w-full'>
+        <Link href='/' className='rounded-full bg-white h-fit min-w-fit'>
           <Image src={logo} alt='logo' width={50} height={50} />
         </Link>
+        <hr className='relative left-[2.3%] z-10 opacity-25 bg-white h-[1px] w-full' />
         <MainMenu />
       </header>
       <main className=''>{children}</main>
