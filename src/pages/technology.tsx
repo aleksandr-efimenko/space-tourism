@@ -1,12 +1,19 @@
 import { NumberedSlider } from '@/components/NumberedSlider'
 import data from '@/data/data.json'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
 
 export default function Technology() {
   const { technology } = data
   const [technologyIndex, setTechnologyIndex] = useState(0)
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setTechnologyIndex((prev) => (prev + 1) % technology.length)
+    }, 5000)
+    return () => clearInterval(interval)
+  }, [technology])
 
   return (
     <>
