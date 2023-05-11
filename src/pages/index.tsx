@@ -27,9 +27,9 @@ export default function Home() {
             of on the edge of it. Well sit back, and relax because we’ll give you a truly out of this world experience!
           </motion.p>
         </div>
-        <div className='col-start-7 col-end-9'></div>
+        {/* <div className='col-start-7 col-end-9'></div> */}
         <motion.div
-          className='flex justify-end col-start-9 col-end-12'
+          className='flex justify-end col-start-8 col-end-12'
           animate={{ opacity: 1 }}
           initial={{ opacity: 0 }}
           transition={{ delay: 0.8, duration: 1 }}

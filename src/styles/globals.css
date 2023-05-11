@@ -45,6 +45,6 @@
   .page-container {
     @apply min-h-screen;
     display: grid;
-    grid-template-columns: minmax(11rem, 1fr) repeat(10, minmax(0, 1fr)) minmax(11rem, 1fr);
+    grid-template-columns: minmax(5rem, 1fr) repeat(10, minmax(0, 1fr)) minmax(2rem, 1fr);
   }
 }
