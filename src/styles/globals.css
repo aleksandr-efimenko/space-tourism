@@ -38,7 +38,7 @@
   .body-text {
     @apply font-barlow text-lg leading-[2rem];
   }
-  .backdrop-menu {
+  .menu-bg-filter {
     backdrop-filter: blur(40.7742px);
     background: rgba(255, 255, 255, 0.04);
   }
