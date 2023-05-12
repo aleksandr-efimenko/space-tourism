@@ -5,7 +5,7 @@ import { useRouter } from 'next/router'
 import { BackgroundImage } from '@/components/BackgroundImage'
 import { websiteStructure } from '@/data/websiteStructure'
 import { bellefair, barlowCondensed, barlow } from '@/styles/fonts'
-import { MainMenu } from '@/components/MainMenu'
+import { MainMenuDesktop } from '@/components/MainMenuDesktop'
 
 export function Layout({ children }: { children: React.ReactNode }) {
   const router = useRouter()
@@ -16,12 +16,18 @@ export function Layout({ children }: { children: React.ReactNode }) {
 
   return (
     <div className={`${bellefair.variable} ${barlowCondensed.variable} ${barlow.variable} text-white`}>
-      <header className='absolute top-10 pl-14 flex items-center justify-between w-full'>
-        <Link href='/' className='rounded-full bg-white h-fit min-w-fit'>
+      <header
+        className='absolute w-full flex items-center justify-between
+                    lg:top-10 lg:pl-14'
+      >
+        <Link href='/' className='rounded-full bg-white h-fit min-w-fit m-6 lg:m-0'>
           <Image src={logo} alt='logo' width={50} height={50} />
         </Link>
-        <hr className='relative left-[2.3%] z-10 opacity-25 bg-white h-[1px] w-full' />
-        <MainMenu />
+        <hr
+          className='hidden w-full relative left-[2.3%] z-10 opacity-25 bg-white h-[1px] 
+                    lg:block'
+        />
+        <MainMenuDesktop />
       </header>
       <main className=''>{children}</main>
       <BackgroundImage backgroundImage={backgroundImage} alt='background image' />

@@ -3,7 +3,7 @@ import { websiteStructure } from '@/data/websiteStructure'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 
-export function MainMenu() {
+export function MainMenuDesktop() {
   const router = useRouter()
   const underlineStyle = ' border-opacity-100'
   const underlineHoverStyle = '  border-opacity-0 hover:border-opacity-50'
@@ -11,7 +11,7 @@ export function MainMenu() {
     return router.pathname === path ? underlineStyle : underlineHoverStyle
   }
   return (
-    <nav className='pl-[9%] pr-[12%] backdrop-menu h-full'>
+    <nav className='px-12 lg:pl-[9%] lg:pr-[12%] backdrop-menu h-full'>
       <ul className='flex gap-12 justify-between nav-text h-full items-center'>
         {websiteStructure.map((item, index) => (
           <li
@@ -20,7 +20,7 @@ export function MainMenu() {
               hover:border-b-[0.1875rem] hover:border-white`}
           >
             <Link href={item.path} key={item.name} className='py-[2.375rem] flex gap-3'>
-              <span>{convertToDoubleDigit(index)}</span>
+              <span className='hidden lg:block'>{convertToDoubleDigit(index)}</span>
               <p>{item.name}</p>
             </Link>
           </li>
