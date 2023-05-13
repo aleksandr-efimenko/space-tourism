@@ -4,9 +4,19 @@ import { motion } from 'framer-motion'
 export default function Home() {
   return (
     <>
-      <div className={`page-container min-h-screen w-full items-end justify-between py-[8.1875rem]`}>
+      <div
+        className={`min-h-screen   
+        md:flex md:flex-col md:items-center md:justify-between md:text-center 
+        md:w-[60%] md:mx-auto md:pt-[18%] md:pb-[9%]
+        lg:w-full lg:text-left lg:py-[8.1875rem] lg:grid lg:page-container lg:justify-between lg:items-end`}
+      >
         <div className='flex flex-col col-start-2 col-end-7'>
-          <motion.p animate={{ opacity: 1 }} initial={{ opacity: 0 }} transition={{ delay: 0.2 }} className='heading5'>
+          <motion.p
+            animate={{ opacity: 1 }}
+            initial={{ opacity: 0 }}
+            transition={{ delay: 0.2 }}
+            className='heading5 text-paleblue'
+          >
             SO, YOU WANT TO TRAVEL TO
           </motion.p>
           <motion.h1
@@ -27,9 +37,8 @@ export default function Home() {
             of on the edge of it. Well sit back, and relax because we’ll give you a truly out of this world experience!
           </motion.p>
         </div>
-        {/* <div className='col-start-7 col-end-9'></div> */}
         <motion.div
-          className='flex justify-end col-start-8 col-end-12'
+          className='flex justify-center col-start-8 col-end-12'
           animate={{ opacity: 1 }}
           initial={{ opacity: 0 }}
           transition={{ delay: 0.8, duration: 1 }}

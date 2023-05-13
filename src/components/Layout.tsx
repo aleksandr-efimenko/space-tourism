@@ -9,7 +9,6 @@ import { bellefair, barlowCondensed, barlow } from '@/styles/fonts'
 import { MainMenuDesktop } from '@/components/MainMenuDesktop'
 import { useState } from 'react'
 import { MainMenuMobile } from './MainMenuMobile'
-import { AnimatePresence } from 'framer-motion'
 
 export function Layout({ children }: { children: React.ReactNode }) {
   const router = useRouter()
@@ -44,7 +43,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
         closeMobileMenu={() => setMobileMenuVisible(false)}
       />
 
-      <main className=''>{children}</main>
+      <main>{children}</main>
       <BackgroundImage backgroundImage={backgroundImage} alt='background image' />
     </div>
   )
