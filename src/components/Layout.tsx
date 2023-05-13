@@ -22,14 +22,19 @@ export function Layout({ children }: { children: React.ReactNode }) {
     <div className={`${bellefair.variable} ${barlowCondensed.variable} ${barlow.variable} text-white `}>
       <header
         className='absolute w-full flex items-center justify-between p-6
-        md:py-0 md:pr-0 md:pl-10 lg:pl-14 lg:top-10 '
+        md:py-0 md:pr-0 md:pl-10 lg:pl-14 lg:top-10'
       >
-        <Link href='/' className='rounded-full bg-white h-fit min-w-fit'>
-          <Image src={logo} alt='logo' width={50} height={50} />
-        </Link>
+        <div
+          className='relative rounded-full bg-white block cursor-pointer
+            h-10 w-10 md:h-12 md:w-12 '
+        >
+          <Link href='/'>
+            <Image src={logo} alt='logo' fill />
+          </Link>
+        </div>
         <hr
-          className='hidden w-full relative left-[2.3%] z-10 opacity-25 bg-white h-[1px] 
-                    lg:block'
+          className='relative hidden flex-auto z-10 opacity-25 bg-white h-[1px]
+           lg:ml-[2%] left-[2.5%] lg:block'
         />
         <MainMenuDesktop currentPathname={router.pathname} />
         <button className='block md:hidden' onClick={() => setMobileMenuVisible(true)}>
