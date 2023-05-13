@@ -17,7 +17,7 @@ export default function Technology() {
 
   return (
     <>
-      <div className='page-container pt-52'>
+      <div className='lg:grid lg:min-h-screen lg:page-container pt-52'>
         <div className='col-start-2 col-end-9'>
           <h1 className=' flex gap-6'>
             <span className='heading5 font-bold opacity-25'>03</span>

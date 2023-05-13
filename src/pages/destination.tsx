@@ -17,7 +17,7 @@ export default function Destination() {
 
   return (
     <>
-      <div className='page-container pt-52 w-full'>
+      <div className='lg:page-container lg:grid lg:min-h-screen pt-52 w-full'>
         <div className='col-start-2 col-end-6 flex flex-col'>
           <h1 className='flex gap-6'>
             <span className='heading5 font-bold opacity-25 '>01</span>

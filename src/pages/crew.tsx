@@ -16,7 +16,10 @@ export default function Crew() {
   }, [crew])
   return (
     <>
-      <div className='page-container justify-center items-end w-full overflow-hidden'>
+      <div
+        className='w-full overflow-hidden
+      lg:grid lg:page-container lg:justify-center lg:items-end '
+      >
         <motion.div
           className='pt-52 pb-24 col-start-2 col-end-8 min-h-screen flex flex-col 
             justify-self-center justify-between items-start'

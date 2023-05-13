@@ -16,7 +16,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
   /**
    *  Get the background image for the current page from the websiteStructure array
    */
-  const backgroundImage = websiteStructure.find((item) => item.path === router.pathname)?.backgroundImage
+  const backgroundImage = websiteStructure.find((item) => item.path === router.pathname)?.backgroundImageDesktop
   const [mobileMenuVisible, setMobileMenuVisible] = useState(false)
   return (
     <div className={`${bellefair.variable} ${barlowCondensed.variable} ${barlow.variable} text-white `}>
