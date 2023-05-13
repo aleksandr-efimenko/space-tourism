@@ -16,7 +16,7 @@ export default function Crew() {
   }, [crew])
   return (
     <>
-      <div className='page-container justify-center items-end w-full'>
+      <div className='page-container justify-center items-end w-full overflow-hidden'>
         <motion.div
           className='pt-52 pb-24 col-start-2 col-end-8 min-h-screen flex flex-col 
             justify-self-center justify-between items-start'

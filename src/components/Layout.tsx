@@ -12,13 +12,14 @@ import { MainMenuMobile } from './MainMenuMobile'
 
 export function Layout({ children }: { children: React.ReactNode }) {
   const router = useRouter()
+
   /**
    *  Get the background image for the current page from the websiteStructure array
    */
   const backgroundImage = websiteStructure.find((item) => item.path === router.pathname)?.backgroundImage
   const [mobileMenuVisible, setMobileMenuVisible] = useState(false)
   return (
-    <div className={`${bellefair.variable} ${barlowCondensed.variable} ${barlow.variable} text-white`}>
+    <div className={`${bellefair.variable} ${barlowCondensed.variable} ${barlow.variable} text-white `}>
       <header
         className='absolute w-full flex items-center justify-between p-6
         md:py-0 md:pr-0 md:pl-10 lg:pl-14 lg:top-10 '
@@ -34,10 +35,10 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <button className='block md:hidden' onClick={() => setMobileMenuVisible(true)}>
           <Image src={hamburgerIcon} alt='hamburger menu icons' />
         </button>
-        {mobileMenuVisible && (
-          <MainMenuMobile currentPathname={router.pathname} closeMobileMenu={() => setMobileMenuVisible(false)} />
-        )}
       </header>
+      {mobileMenuVisible && (
+        <MainMenuMobile currentPathname={router.pathname} closeMobileMenu={() => setMobileMenuVisible(false)} />
+      )}
       <main className=''>{children}</main>
       <BackgroundImage backgroundImage={backgroundImage} alt='background image' />
     </div>
