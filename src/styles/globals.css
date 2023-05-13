@@ -54,4 +54,8 @@
   .page-container {
     grid-template-columns: minmax(5rem, 1fr) repeat(10, minmax(0, 1fr)) minmax(2rem, 1fr);
   }
+  .max-height-100vh {
+    max-height: 100svh;
+    max-height: 100vh;
+  }
 }
