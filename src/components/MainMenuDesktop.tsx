@@ -9,7 +9,11 @@ export function MainMenuDesktop({ currentPathname }: { currentPathname: string }
     return currentPathname === path ? underlineStyle : underlineHoverStyle
   }
   return (
-    <nav className='hidden md:block lg:pl-[9%] lg:pr-[12%] menu-bg-filter px-12'>
+    <nav
+      className='hidden menu-bg-filter 
+              md:block md:px-12 
+              lg:pl-[9%] lg:pr-[12%] '
+    >
       <ul className='flex gap-12 justify-between h-full items-center'>
         {websiteStructure.map((item, index) => (
           <li
