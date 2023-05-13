@@ -9,6 +9,7 @@ import { bellefair, barlowCondensed, barlow } from '@/styles/fonts'
 import { MainMenuDesktop } from '@/components/MainMenuDesktop'
 import { useState } from 'react'
 import { MainMenuMobile } from './MainMenuMobile'
+import { AnimatePresence } from 'framer-motion'
 
 export function Layout({ children }: { children: React.ReactNode }) {
   const router = useRouter()
@@ -36,9 +37,13 @@ export function Layout({ children }: { children: React.ReactNode }) {
           <Image src={hamburgerIcon} alt='hamburger menu icons' />
         </button>
       </header>
-      {mobileMenuVisible && (
-        <MainMenuMobile currentPathname={router.pathname} closeMobileMenu={() => setMobileMenuVisible(false)} />
-      )}
+
+      <MainMenuMobile
+        mobileMenuVisible={mobileMenuVisible}
+        currentPathname={router.pathname}
+        closeMobileMenu={() => setMobileMenuVisible(false)}
+      />
+
       <main className=''>{children}</main>
       <BackgroundImage backgroundImage={backgroundImage} alt='background image' />
     </div>
