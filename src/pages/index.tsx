@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <>
       <div
-        className={`min-h-screen  
+        className={`min-height-100vh  
         flex flex-col items-center justify-between text-center gap-8
         pt-28 pb-12
         md:w-[60%] md:mx-auto md:pt-[18%] md:pb-[9%]
