@@ -6,7 +6,7 @@ export default function Home() {
     <>
       <div
         className={`min-h-screen  
-        flex flex-col items-center justify-between text-center 
+        flex flex-col items-center justify-between text-center gap-8
         pt-28 pb-12
         md:w-[60%] md:mx-auto md:pt-[18%] md:pb-[9%]
         lg:w-full lg:text-left lg:py-[8.1875rem] lg:grid lg:page-container lg:justify-between lg:items-end`}
