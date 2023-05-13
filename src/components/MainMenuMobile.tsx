@@ -14,6 +14,11 @@ export function MainMenuMobile({
   mobileMenuVisible: boolean
   closeMobileMenu: () => void
 }) {
+  const activeLineStyle = 'border-opacity-100'
+  const activeHoverStyle = 'border-opacity-0 hover:border-opacity-50'
+  const borderIfActive = (path: string) => {
+    return currentPathname === path ? activeLineStyle : activeHoverStyle
+  }
   return (
     <AnimatePresence>
       {mobileMenuVisible && (
@@ -32,9 +37,9 @@ export function MainMenuMobile({
               <button className='absolute top-9 right-6' onClick={closeMobileMenu}>
                 <Image src={closeIcon} alt='close icon' width={20} height={20} />
               </button>
-              <ul className='mt-28 w-full flex flex-col gap-8'>
+              <ul className='mt-28 w-full flex flex-col gap-2'>
                 {websiteStructure.map((item, index) => (
-                  <li key={item.name}>
+                  <li key={item.name} className={`${borderIfActive(item.path)} border-r-4 border-white py-3`}>
                     <Link
                       href={item.path}
                       key={item.name}

@@ -4,7 +4,7 @@ import Link from 'next/link'
 
 export function MainMenuDesktop({ currentPathname }: { currentPathname: string }) {
   const underlineStyle = ' border-opacity-100'
-  const underlineHoverStyle = '  border-opacity-0 hover:border-opacity-50'
+  const underlineHoverStyle = 'border-opacity-0 hover:border-opacity-50'
   const underlineIfActive = (path: string) => {
     return currentPathname === path ? underlineStyle : underlineHoverStyle
   }
@@ -15,7 +15,7 @@ export function MainMenuDesktop({ currentPathname }: { currentPathname: string }
           <li
             key={item.name}
             className={` ${underlineIfActive(item.path)} border-b-[0.1875rem] border-white 
-              hover:border-b-[0.1875rem] hover:border-white`}
+               `}
           >
             <Link href={item.path} key={item.name} className='py-[2.375rem] flex gap-3 md:subheading2 lg:nav-text'>
               <span className='hidden lg:block font-bold'>{convertToDoubleDigit(index)}</span>
