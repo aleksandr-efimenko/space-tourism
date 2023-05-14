@@ -1,5 +1,5 @@
 import data from '@/data/data.json'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import Image from 'next/image'
 import { TextSlider } from '@/components/TextSlider'
 import { PlanetInfoColumn } from '@/components/PlanetInfoColumn'
@@ -9,19 +9,19 @@ import PageTitle from '@/components/PageTitle'
 export default function Destination() {
   const { destinations } = data
   const [destinationIndex, setDestinationIndex] = useState(0)
-  // useEffect(() => {
-  //   const interval = setInterval(() => {
-  //     setDestinationIndex((prev) => (prev + 1) % destinations.length)
-  //   }, 5000)
-  //   return () => clearInterval(interval)
-  // }, [destinations])
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setDestinationIndex((prev) => (prev + 1) % destinations.length)
+    }, 5000)
+    return () => clearInterval(interval)
+  }, [destinations])
 
   return (
     <>
       <div
         className='w-full text-center
-          pt-[5.5rem] px-6
-          md:pt-28 md:px-0
+          py-[5.5rem] px-6
+          md:py-28 md:px-0
           lg:pt-52 lg:page-container lg:grid lg:min-h-screen '
       >
         <div
