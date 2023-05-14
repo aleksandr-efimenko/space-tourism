@@ -8,17 +8,17 @@ import { motion } from 'framer-motion'
 export default function Destination() {
   const { destinations } = data
   const [destinationIndex, setDestinationIndex] = useState(0)
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setDestinationIndex((prev) => (prev + 1) % destinations.length)
-    }, 5000)
-    return () => clearInterval(interval)
-  }, [destinations])
+  // useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     setDestinationIndex((prev) => (prev + 1) % destinations.length)
+  //   }, 5000)
+  //   return () => clearInterval(interval)
+  // }, [destinations])
 
   return (
     <>
-      <div className='lg:page-container lg:grid lg:min-h-screen pt-52 w-full'>
-        <div className='col-start-2 col-end-6 flex flex-col'>
+      <div className='lg:page-container lg:grid lg:min-h-screen lg:pt-52 w-full'>
+        <div className='lg:col-start-2 lg:col-end-6 flex flex-col'>
           <h1 className='flex gap-6'>
             <span className='heading5 font-bold opacity-25 '>01</span>
             <p className='heading5 '>Pick your destination</p>
@@ -28,7 +28,7 @@ export default function Destination() {
             initial={{ y: '-5rem', opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.5 }}
-            className='flex justify-center items-center h-full'
+            className='flex justify-center items-center h-full relative z-10'
           >
             <Image src={destinations[destinationIndex].images.webp} alt='destination' width={445} height={445} />
           </motion.div>
@@ -42,7 +42,7 @@ export default function Destination() {
           />
           <motion.h2
             key={destinations[destinationIndex].name}
-            className='heading2  mt-9 mb-[0.875rem]'
+            className='heading2 mt-9 mb-[0.875rem]'
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.4 }}

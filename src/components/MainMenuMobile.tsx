@@ -22,7 +22,7 @@ export function MainMenuMobile({
   return (
     <AnimatePresence>
       {mobileMenuVisible && (
-        <div className='absolute inset-0 overflow-hidden z-10'>
+        <div className='absolute inset-0 overflow-hidden z-50'>
           <motion.div
             className='md:hidden flex justify-end w-full'
             // open and close animation

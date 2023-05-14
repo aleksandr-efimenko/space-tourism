@@ -7,27 +7,30 @@ import { BackgroundImage } from '@/components/BackgroundImage'
 import { websiteStructure } from '@/data/websiteStructure'
 import { bellefair, barlowCondensed, barlow } from '@/styles/fonts'
 import { MainMenuDesktop } from '@/components/MainMenuDesktop'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { MainMenuMobile } from './MainMenuMobile'
 import { isMobile } from 'react-device-detect'
 
 export function Layout({ children }: { children: React.ReactNode }) {
   const router = useRouter()
-
-  /**
-   *  Get the background image for the current page from the websiteStructure array
-   *  depending on the device type
-   */
-  const backgroundImageItem = websiteStructure.find((item) => item.path === router.pathname)
-  const backgroundImage = isMobile
-    ? backgroundImageItem?.backgroundImageMobile
-    : backgroundImageItem?.backgroundImageDesktop
+  const [backgroundImage, setBackgroundImage] = useState<string>('')
+  useEffect(() => {
+    /**
+     *  Get the background image for the current page from the websiteStructure array
+     *  depending on the device type
+     */
+    const backgroundImageItem = websiteStructure.find((item) => item.path === router.pathname)
+    const backgroundImage = isMobile
+      ? backgroundImageItem?.backgroundImageMobile
+      : backgroundImageItem?.backgroundImageDesktop
+    setBackgroundImage(backgroundImage || '')
+  }, [router.pathname])
 
   const [mobileMenuVisible, setMobileMenuVisible] = useState(false)
   return (
     <div className={`${bellefair.variable} ${barlowCondensed.variable} ${barlow.variable} text-white max-height-100vh`}>
       <header
-        className='absolute w-full flex items-center justify-between p-6
+        className='absolute w-full flex items-center justify-between p-6 z-40
         md:py-0 md:pr-0 md:pl-10 lg:pl-14 lg:top-10'
       >
         <div
