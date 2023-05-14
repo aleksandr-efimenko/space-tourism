@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 export function TextSlider({ items, currentIndex, setIndex }: TextSliderProps) {
   return (
-    <div className='flex gap-[2.1875rem] text-paleblue uppercase  nav-text'>
+    <div className='flex gap-[1.625rem] md:gap-[2.1875rem] text-paleblue uppercase  nav-text'>
       {items.map((item, i) => {
         return (
           <Link

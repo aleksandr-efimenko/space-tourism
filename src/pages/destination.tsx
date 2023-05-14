@@ -1,9 +1,10 @@
 import data from '@/data/data.json'
-import { use, useEffect, useState } from 'react'
+import { useState } from 'react'
 import Image from 'next/image'
 import { TextSlider } from '@/components/TextSlider'
 import { PlanetInfoColumn } from '@/components/PlanetInfoColumn'
 import { motion } from 'framer-motion'
+import PageTitle from '@/components/PageTitle'
 
 export default function Destination() {
   const { destinations } = data
@@ -17,12 +18,19 @@ export default function Destination() {
 
   return (
     <>
-      <div className='lg:page-container lg:grid lg:min-h-screen lg:pt-52 w-full md:pt-28'>
-        <div className='lg:col-start-2 lg:col-end-6 flex flex-col gap-8 md:justify-between'>
-          <h1 className='flex gap-6 md:pl-9'>
-            <span className='heading5 font-bold opacity-25 '>01</span>
-            <p className='heading5 '>Pick your destination</p>
-          </h1>
+      <div
+        className='w-full text-center
+          pt-[5.5rem] px-6
+          md:pt-28 md:px-0
+          lg:pt-52 lg:page-container lg:grid lg:min-h-screen '
+      >
+        <div
+          className='flex flex-col 
+             items-center gap-8
+          md:items-start md:justify-between 
+          lg:gap-0 lg:justify-start lg:col-start-2 lg:col-end-6 '
+        >
+          <PageTitle number='01' title='Pick your destination' />
           <motion.div
             key={destinations[destinationIndex].images.webp}
             initial={{ y: '-5rem', opacity: 0 }}
@@ -42,12 +50,13 @@ export default function Destination() {
                 fill
                 style={{ objectFit: 'contain', objectPosition: 'center' }}
               />
-            </div>{' '}
+            </div>
           </motion.div>
         </div>
 
         <div
           className='flex flex-col   items-center 
+            mt-[26px]
           md:mt-[3.3125rem] md:w-9/12 md:m-auto md:text-center
           lg:mt-16        lg:w-full  lg:items-start lg:text-left lg:col-start-7 lg:col-end-12'
         >
@@ -58,7 +67,10 @@ export default function Destination() {
           />
           <motion.h2
             key={destinations[destinationIndex].name}
-            className='heading2 lg:mt-9 md:mt-8  lg:mb-[0.875rem] md:mb-2'
+            className='heading2 
+             mt-7 mb-[0.0625rem]
+             md:mt-8 md:mb-2 
+          lg:mt-9 lg:mb-[0.875rem]'
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.4 }}
@@ -81,8 +93,12 @@ export default function Destination() {
             key={destinations[destinationIndex].distance}
             className='w-full'
           >
-            <hr className='border-gray border-1 md:mt-[3.0625rem] lg:mt-[3.375rem] md:mb-7' />
-            <div className='flex gap-20 lg:justify-start md:justify-center'>
+            <hr className='border-gray border-1 my-8 md:mt-[3.0625rem] lg:mt-[3.375rem] md:mb-7' />
+            <div
+              className='flex flex-col gap-8
+            md:flex-row md:gap-20 md:justify-center
+            lg:justify-start'
+            >
               <PlanetInfoColumn headerText='AVG. DISTANCE' bodyText={destinations[destinationIndex].distance} />
               <PlanetInfoColumn headerText='EST. TRAVEL TIME' bodyText={destinations[destinationIndex].travel} />
             </div>
