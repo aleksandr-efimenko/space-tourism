@@ -9,14 +9,20 @@ import { bellefair, barlowCondensed, barlow } from '@/styles/fonts'
 import { MainMenuDesktop } from '@/components/MainMenuDesktop'
 import { useState } from 'react'
 import { MainMenuMobile } from './MainMenuMobile'
+import { isMobile } from 'react-device-detect'
 
 export function Layout({ children }: { children: React.ReactNode }) {
   const router = useRouter()
 
   /**
    *  Get the background image for the current page from the websiteStructure array
+   *  depending on the device type
    */
-  const backgroundImage = websiteStructure.find((item) => item.path === router.pathname)?.backgroundImageDesktop
+  const backgroundImageItem = websiteStructure.find((item) => item.path === router.pathname)
+  const backgroundImage = isMobile
+    ? backgroundImageItem?.backgroundImageMobile
+    : backgroundImageItem?.backgroundImageDesktop
+
   const [mobileMenuVisible, setMobileMenuVisible] = useState(false)
   return (
     <div className={`${bellefair.variable} ${barlowCondensed.variable} ${barlow.variable} text-white max-height-100vh`}>
