@@ -16,7 +16,10 @@
                                lg:leading-[10.75rem];
   }
   .heading2 {
-    @apply font-bellfair uppercase text-[6.25rem] leading-[7.1875rem];
+    @apply font-bellfair uppercase 
+    text-[3.5rem] leading-[4rem]
+    md:text-[5rem] md:leading-[5.75rem]
+    lg:text-[6.25rem] lg:leading-[7.1875rem];
   }
   .heading3 {
     @apply font-bellfair uppercase text-[3.5rem] leading-[4rem];

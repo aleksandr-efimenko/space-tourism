@@ -13,6 +13,7 @@ export function BackgroundImage({ backgroundImage, alt }: BackgroundImageProps) 
           priority
           src={backgroundImage}
           alt={alt}
+          quality={95}
           style={{
             objectFit: 'cover',
             objectPosition: 'center',

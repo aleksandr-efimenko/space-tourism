@@ -28,7 +28,9 @@ export function Layout({ children }: { children: React.ReactNode }) {
 
   const [mobileMenuVisible, setMobileMenuVisible] = useState(false)
   return (
-    <div className={`${bellefair.variable} ${barlowCondensed.variable} ${barlow.variable} text-white max-height-100vh`}>
+    <div
+      className={`${bellefair.variable} ${barlowCondensed.variable} ${barlow.variable} text-white max-height-100vh overflow-auto`}
+    >
       <header
         className='absolute w-full flex items-center justify-between p-6 z-40
         md:py-0 md:pr-0 md:pl-10 lg:pl-14 lg:top-10'
