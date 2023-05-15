@@ -3,6 +3,7 @@ import Image from 'next/image'
 import { WhiteDotsSlider } from '@/components/WhiteDotsSlider'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useEffect, useState } from 'react'
+import PageTitle from '@/components/PageTitle'
 
 export default function Crew() {
   const { crew } = data
@@ -25,10 +26,7 @@ export default function Crew() {
             justify-self-center justify-between items-start'
           key={crewMemberIndex + crew[crewMemberIndex].name}
         >
-          <h1 className='flex gap-6'>
-            <span className='heading5 font-bold opacity-25'>02</span>
-            <p className='heading5'> Meet your crew</p>
-          </h1>
+          <PageTitle number='02' title='Meet your crew' />
           <div>
             <motion.p
               key={crew[crewMemberIndex].role}

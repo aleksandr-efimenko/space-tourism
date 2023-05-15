@@ -3,6 +3,7 @@ import data from '@/data/data.json'
 import { useEffect, useState } from 'react'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
+import PageTitle from '@/components/PageTitle'
 
 export default function Technology() {
   const { technology } = data
@@ -19,11 +20,7 @@ export default function Technology() {
     <>
       <div className='lg:grid lg:min-h-screen lg:page-container pt-52'>
         <div className='col-start-2 col-end-9'>
-          <h1 className=' flex gap-6'>
-            <span className='heading5 font-bold opacity-25'>03</span>
-            <p className='heading5'>SPACE LAUNCH 101</p>
-          </h1>
-
+          <PageTitle number='03' title='Space launch 101' />
           <div className='flex items-center h-5/6'>
             <div className='flex gap-16'>
               <NumberedSlider
