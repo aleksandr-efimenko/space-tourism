@@ -18,8 +18,8 @@ export default function Technology() {
 
   return (
     <>
-      <div className='lg:grid lg:min-h-screen lg:page-container pt-52'>
-        <div className='col-start-2 col-end-9'>
+      <div className='lg:grid lg:min-h-screen lg:page-container lg:pt-52 w-full'>
+        <div className='lg:col-start-2 lg:col-end-9'>
           <PageTitle number='03' title='Space launch 101' />
           <div className='flex items-center h-5/6'>
             <div className='flex gap-16'>
