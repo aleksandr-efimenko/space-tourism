@@ -4,21 +4,23 @@ import { useEffect, useState } from 'react'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
 import PageTitle from '@/components/PageTitle'
+import PageContainer from '@/components/PageContainer'
+import TechnologyInfo from '@/components/TechnologyInfo'
 
 export default function Technology() {
   const { technology } = data
   const [technologyIndex, setTechnologyIndex] = useState(0)
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setTechnologyIndex((prev) => (prev + 1) % technology.length)
-    }, 5000)
-    return () => clearInterval(interval)
-  }, [technology])
+  // useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     setTechnologyIndex((prev) => (prev + 1) % technology.length)
+  //   }, 5000)
+  //   return () => clearInterval(interval)
+  // }, [technology])
 
   return (
     <>
-      <div className='lg:grid lg:min-h-screen lg:page-container lg:pt-52 w-full'>
+      <PageContainer>
         <div className='lg:col-start-2 lg:col-end-9'>
           <PageTitle number='03' title='Space launch 101' />
           <div className='flex items-center h-5/6'>
@@ -29,33 +31,7 @@ export default function Technology() {
                 setIndex={setTechnologyIndex}
               />
               <div className='pr-4'>
-                <motion.p
-                  key={technologyIndex + technology[technologyIndex].name}
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ delay: 0.2 }}
-                  className='nav-text text-paleblue mb-3'
-                >
-                  THE TERMINOLOGY…
-                </motion.p>
-                <motion.h2
-                  key={technology[technologyIndex].name}
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ delay: 0.4 }}
-                  className='heading3 mb-4'
-                >
-                  {technology[technologyIndex].name}
-                </motion.h2>
-                <motion.p
-                  key={technology[technologyIndex].description.slice(0, 100)}
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ delay: 0.6 }}
-                  className='text-paleblue max-w-[75%]'
-                >
-                  {technology[technologyIndex].description}
-                </motion.p>
+                <TechnologyInfo technology={technology} technologyIndex={technologyIndex} />
               </div>
             </div>
           </div>
@@ -65,11 +41,11 @@ export default function Technology() {
           initial={{ x: '-5rem', opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 0.6 }}
-          className='col-start-9 col-end-13 mt-6'
+          className='lg:col-start-9 lg:col-end-13 lg:mt-6'
         >
           <Image alt='space explorer' src={technology[technologyIndex].images.portrait} width={515} height={527} />
         </motion.div>
-      </div>
+      </PageContainer>
     </>
   )
 }
