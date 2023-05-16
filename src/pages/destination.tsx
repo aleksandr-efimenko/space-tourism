@@ -5,6 +5,7 @@ import { TextSlider } from '@/components/TextSlider'
 import { PlanetInfoColumn } from '@/components/PlanetInfoColumn'
 import { motion } from 'framer-motion'
 import PageTitle from '@/components/PageTitle'
+import PageContainer from '@/components/PageContainer'
 
 export default function Destination() {
   const { destinations } = data
@@ -18,12 +19,7 @@ export default function Destination() {
 
   return (
     <>
-      <div
-        className='w-full text-center
-          py-[5.5rem] px-6
-          md:py-28 md:px-0
-          lg:pt-52 lg:pb-2 lg:page-container lg:grid lg:min-h-screen '
-      >
+      <PageContainer>
         <div
           className='flex flex-col 
              items-center gap-8
@@ -104,7 +100,7 @@ export default function Destination() {
             </div>
           </motion.div>
         </div>
-      </div>
+      </PageContainer>
     </>
   )
 }
