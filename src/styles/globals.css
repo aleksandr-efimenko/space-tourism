@@ -26,9 +26,16 @@
   }
   .heading4 {
     @apply font-bellfair uppercase  
-                text-xl leading-6 
-                md:text-[2rem] md:leading-[2.3125rem];
+                text-base leading-[1.125rem] 
+                md:text-2xl md:leading-7
+                lg:text-[2rem] lg:leading-[2.3125rem];
   }
+  .explore-button {
+    @apply font-bellfair uppercase  
+    text-[1.25rem] leading-[1.4375rem] tracking-[0.0781rem]
+    md:text-[2rem] md:leading-[2.3125rem] md:tracking-[0.125rem];
+  }
+
   .heading5 {
     @apply font-barlowcon uppercase 
                text-base         leading-[1.1875rem]   tracking-[0.1688rem]

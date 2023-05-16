@@ -23,7 +23,7 @@ export function ExploreButton() {
       whileHover={whilteHoverStyle}
       whileTap={whileTapStyle}
     >
-      <p className='heading4 md:tracking-[0.125rem] trackin-[0.0781rem] text-darkspace'>EXPLORE</p>
+      <p className='explore-button text-darkspace'>EXPLORE</p>
     </motion.a>
   )
 }
