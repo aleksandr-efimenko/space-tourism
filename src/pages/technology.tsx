@@ -1,11 +1,11 @@
 import { NumberedSlider } from '@/components/NumberedSlider'
 import data from '@/data/data.json'
 import { useEffect, useState } from 'react'
-import Image from 'next/image'
-import { motion } from 'framer-motion'
 import PageTitle from '@/components/PageTitle'
 import PageContainer from '@/components/PageContainer'
-import TechnologyInfo from '@/components/TechnologyInfo'
+import TechnologyInfo from '@/components/Technology/TechnologyInfo'
+import TechnologyImageSlider from '@/components/Technology/TechnologyImageSlider'
+import { isMobile } from 'react-device-detect'
 
 export default function Technology() {
   const { technology } = data
@@ -21,30 +21,33 @@ export default function Technology() {
   return (
     <>
       <PageContainer>
-        <div className='lg:col-start-2 lg:col-end-9'>
-          <PageTitle number='03' title='Space launch 101' />
-          <div className='flex items-center h-5/6'>
-            <div className='flex gap-16'>
-              <NumberedSlider
-                itemsNumber={technology.length}
-                currentIndex={technologyIndex}
-                setIndex={setTechnologyIndex}
-              />
-              <div className='pr-4'>
-                <TechnologyInfo technology={technology} technologyIndex={technologyIndex} />
-              </div>
+        <PageTitle number='03' title='Space launch 101' />
+        <div
+          className='row-start-3 row-end-4 flex h-5/6
+                  lg:row-auto lg:col-start-2 lg:col-end-9'
+        >
+          <div className='flex lg:gap-16 md:gap-[2.75rem] items-center flex-col lg:flex-row '>
+            <NumberedSlider
+              itemsNumber={technology.length}
+              currentIndex={technologyIndex}
+              setIndex={setTechnologyIndex}
+            />
+            <div className='lg:pr-4 lg:w-full'>
+              <TechnologyInfo technology={technology} technologyIndex={technologyIndex} />
             </div>
           </div>
         </div>
-        <motion.div
-          key={technology[technologyIndex].images.portrait}
-          initial={{ x: '-5rem', opacity: 0 }}
-          animate={{ x: 0, opacity: 1 }}
-          transition={{ duration: 0.6 }}
-          className='lg:col-start-9 lg:col-end-13 lg:mt-6'
-        >
-          <Image alt='space explorer' src={technology[technologyIndex].images.portrait} width={515} height={527} />
-        </motion.div>
+
+        <TechnologyImageSlider
+          className='relative w-full 
+           md:mt-[3.75rem] md:mb-14
+          row-start-2 row-end-3
+          h-44 md:h-80 lg:h-full
+          lg:my-0 lg:row-auto
+          lg:col-start-9 lg:col-end-13'
+          images={technology[technologyIndex].images}
+          imageType={isMobile ? 'landscape' : 'portrait'}
+        />
       </PageContainer>
     </>
   )

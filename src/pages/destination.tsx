@@ -27,28 +27,28 @@ export default function Destination() {
           lg:gap-0 lg:justify-start lg:col-start-2 lg:col-end-6 '
         >
           <PageTitle number='01' title='Pick your destination' />
-          <motion.div
-            key={destinations[destinationIndex].images.webp}
-            initial={{ y: '-5rem', opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.5 }}
-            className='flex justify-center items-center w-full h-[75%]'
-          >
-            <div
-              className=' relative z-10 w-[10.625rem] h-[10.625rem]
+        </div>
+        <motion.div
+          key={destinations[destinationIndex].images.webp}
+          initial={{ y: '-5rem', opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.5 }}
+          className='flex justify-center items-center w-full h-[75%]'
+        >
+          <div
+            className=' relative z-10 w-[10.625rem] h-[10.625rem]
           md:w-[18.75rem] md:h-[18.75rem]
           lg:w-[27.8125rem] lg:h-[27.8125rem]'
-            >
-              <Image
-                priority
-                src={destinations[destinationIndex].images.webp}
-                alt='destination '
-                fill
-                style={{ objectFit: 'contain', objectPosition: 'center' }}
-              />
-            </div>
-          </motion.div>
-        </div>
+          >
+            <Image
+              priority
+              src={destinations[destinationIndex].images.webp}
+              alt='destination '
+              fill
+              style={{ objectFit: 'contain', objectPosition: 'center' }}
+            />
+          </div>
+        </motion.div>
 
         <div
           className='flex flex-col   items-center 

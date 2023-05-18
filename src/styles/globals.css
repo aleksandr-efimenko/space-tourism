@@ -30,7 +30,7 @@
                 md:text-2xl md:leading-7
                 lg:text-[2rem] lg:leading-[2.3125rem];
   }
-  .explore-button {
+  .explore-button-text {
     @apply font-bellfair uppercase  
     text-[1.25rem] leading-[1.4375rem] tracking-[0.0781rem]
     md:text-[2rem] md:leading-[2.3125rem] md:tracking-[0.125rem];
@@ -60,9 +60,6 @@
   .menu-bg-filter {
     backdrop-filter: blur(40.7742px);
     background: rgba(255, 255, 255, 0.04);
-  }
-  .page-container {
-    grid-template-columns: minmax(5rem, 1fr) repeat(10, minmax(0, 1fr)) minmax(2rem, 1fr);
   }
   .max-height-100vh {
     max-height: 100vh;
