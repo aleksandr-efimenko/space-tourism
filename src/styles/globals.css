@@ -22,7 +22,10 @@
     lg:text-[6.25rem] lg:leading-[7.1875rem];
   }
   .heading3 {
-    @apply font-bellfair uppercase text-[3.5rem] leading-[4rem];
+    @apply font-bellfair uppercase 
+    text-2xl leading-7
+    md:text-[2.5rem] md:leading-[2.875rem]
+    lg:text-[3.5rem] lg:leading-[4rem];
   }
   .heading4 {
     @apply font-bellfair uppercase  
