@@ -15,7 +15,7 @@ export default function TechnologyInfo({
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.2 }}
-        className='nav-text text-paleblue lg:mb-3 md:mb-4'
+        className='nav-text text-paleblue mb-[0.5625rem] lg:mb-3 md:mb-4'
       >
         THE TERMINOLOGY…
       </motion.p>
@@ -24,7 +24,7 @@ export default function TechnologyInfo({
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.4 }}
-        className='heading3 md:mb-4'
+        className='heading3 mb-4'
       >
         {technology[technologyIndex].name}
       </motion.h2>

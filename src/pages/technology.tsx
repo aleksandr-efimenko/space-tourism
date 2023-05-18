@@ -26,7 +26,7 @@ export default function Technology() {
           className='row-start-3 row-end-4 flex h-5/6
                   lg:row-auto lg:col-start-2 lg:col-end-9'
         >
-          <div className='flex lg:gap-16 md:gap-[2.75rem] items-center flex-col lg:flex-row '>
+          <div className='flex gap-[1.625rem] md:gap-[2.75rem] lg:gap-16  items-center flex-col lg:flex-row '>
             <NumberedSlider
               itemsNumber={technology.length}
               currentIndex={technologyIndex}
@@ -39,12 +39,11 @@ export default function Technology() {
         </div>
 
         <TechnologyImageSlider
-          className='relative w-full 
-           md:mt-[3.75rem] md:mb-14
-          row-start-2 row-end-3
-          h-44 md:h-80 lg:h-full
-          lg:my-0 lg:row-auto
-          lg:col-start-9 lg:col-end-13'
+          className='relative w-full h-44
+                      row-start-2 row-end-3 mt-8 mb-[2.125rem]
+                      md:mt-[3.75rem] md:mb-14 md:h-80 
+                      lg:row-start-1 lg:row-end-4 lg:h-full lg:my-0 
+                      lg:col-start-9 lg:col-end-13'
           images={technology[technologyIndex].images}
           imageType={isMobile ? 'landscape' : 'portrait'}
         />

@@ -5,8 +5,8 @@ export function NumberedSlider({ itemsNumber, currentIndex, setIndex }: Numbered
   const items = Array.from(Array(itemsNumber).keys())
   return (
     <div
-      className='flex  md:flex-row md:gap-4 
-                        lg:flex-col lg:gap-8'
+      className='flex md:flex-row gap-4 
+                      lg:flex-col lg:gap-8'
     >
       {items.map((index) => (
         <Link
@@ -18,7 +18,7 @@ export function NumberedSlider({ itemsNumber, currentIndex, setIndex }: Numbered
           w-10 h-10
           md:w-[3.75rem] md:h-[3.75rem]
           lg:w-20 lg:h-20
-          ${index === currentIndex ? ' bg-white text-darkspace ' : ''}`}
+          ${index === currentIndex ? 'bg-white text-darkspace' : ''}`}
         >
           {index + 1}
         </Link>
