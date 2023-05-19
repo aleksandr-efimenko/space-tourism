@@ -32,7 +32,7 @@ export default function Destination() {
             currentIndex={destinationIndex}
             setIndex={setDestinationIndex}
           />
-          <DestinationInfo destinations={destinations} destinationIndex={destinationIndex} />
+          <DestinationInfo destination={destinations[destinationIndex]} />
         </div>
       </PageContainer>
     </>
