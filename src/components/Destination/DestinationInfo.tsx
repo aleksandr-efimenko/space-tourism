@@ -38,14 +38,22 @@ export default function DestinationInfo({ destinations, destinationIndex }: Dest
         key={destinations[destinationIndex].distance}
         className='w-full'
       >
-        <hr className='border-gray border-1 my-8 md:mt-[3.0625rem] lg:mt-[3.375rem] md:mb-7' />
+        <hr
+          className='border-gray border-1 my-8 
+                      md:mt-[3.0625rem] md:mb-7 
+                      lg:mt-[3.375rem] '
+        />
         <div
-          className='flex flex-col gap-8
-            md:flex-row md:gap-20 md:justify-center
-            lg:justify-start'
+          className='flex flex-col    gap-8
+                       md:flex-row md:gap-20 md:justify-center
+                                   lg:gap-0  lg:justify-start'
         >
-          <PlanetInfoColumn headerText='AVG. DISTANCE' bodyText={destinations[destinationIndex].distance} />
-          <PlanetInfoColumn headerText='EST. TRAVEL TIME' bodyText={destinations[destinationIndex].travel} />
+          <div className='flex-1 w-full'>
+            <PlanetInfoColumn headerText='AVG. DISTANCE' bodyText={destinations[destinationIndex].distance} />
+          </div>
+          <div className='flex-1 w-full'>
+            <PlanetInfoColumn headerText='EST. TRAVEL TIME' bodyText={destinations[destinationIndex].travel} />
+          </div>
         </div>
       </motion.div>
     </>

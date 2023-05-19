@@ -9,31 +9,23 @@ import DestinationImageSlider from '@/components/Destination/DestinationImageSli
 export default function Destination() {
   const { destinations } = data
   const [destinationIndex, setDestinationIndex] = useState(0)
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setDestinationIndex((prev) => (prev + 1) % destinations.length)
-    }, 5000)
-    return () => clearInterval(interval)
-  }, [destinations])
 
   return (
     <>
       <PageContainer>
+        <PageTitle number='01' title='Pick your destination' />
         <div
-          className='flex flex-col 
-             items-center gap-8
-          md:items-start md:justify-between 
-          lg:gap-0 lg:justify-start lg:col-start-2 lg:col-end-6 '
+          className=' mt-8
+        md:mt-[3.75rem] 
+        lg:mt-0 lg:col-start-2 lg:col-end-6 lg:row-start-2 lg:row-end-3'
         >
-          <PageTitle number='01' title='Pick your destination' />
+          <DestinationImageSlider destination={destinations[destinationIndex]} />
         </div>
-        <DestinationImageSlider destination={destinations[destinationIndex]} />
-
         <div
-          className='flex flex-col   items-center 
-            mt-[26px]
-          md:mt-[3.3125rem] md:w-9/12 md:m-auto md:text-center
-          lg:mt-16        lg:w-full  lg:items-start lg:text-left lg:col-start-7 lg:col-end-12'
+          className='flex flex-col items-center h-full justify-center
+            mt-[1.625rem] px-6
+           md:px-0 md:mt-[3.3125rem] md:w-9/12 md:m-auto md:text-center
+          lg:mt-0       lg:w-full  lg:items-start lg:text-left lg:col-start-7 lg:col-end-12 lg:row-start-1 lg:row-end-3'
         >
           <TextSlider
             items={destinations.map((item) => item.name)}

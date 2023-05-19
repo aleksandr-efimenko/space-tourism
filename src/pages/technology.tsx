@@ -33,7 +33,7 @@ export default function Technology() {
               setIndex={setTechnologyIndex}
             />
             <div className='lg:pr-4 lg:w-full'>
-              <TechnologyInfo technology={technology} technologyIndex={technologyIndex} />
+              <TechnologyInfo technology={technology[technologyIndex]} />
             </div>
           </div>
         </div>

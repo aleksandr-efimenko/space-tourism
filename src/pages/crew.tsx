@@ -9,12 +9,6 @@ export default function Crew() {
   const { crew } = data
   const [crewMemberIndex, setCrewMemberIndex] = useState(0)
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCrewMemberIndex((prev) => (prev + 1) % crew.length)
-    }, 5000)
-    return () => clearInterval(interval)
-  }, [crew])
   return (
     <>
       <div

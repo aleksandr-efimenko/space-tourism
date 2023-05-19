@@ -10,7 +10,7 @@ export default function DestinationImageSlider({ destination }: { destination: D
         initial={{ y: '-5rem', opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.5 }}
-        className='flex justify-center items-center w-full h-[75%]'
+        className='flex justify-center items-center w-full'
       >
         <div
           className=' relative z-10 w-[10.625rem] h-[10.625rem]
