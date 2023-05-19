@@ -1,6 +1,6 @@
 import data from '@/data/data.json'
 import { useEffect, useState } from 'react'
-import { TextSlider } from '@/components/TextSlider'
+import { TextSlider } from '@/components/Sliders/TextSlider'
 import PageTitle from '@/components/PageTitle'
 import PageContainer from '@/components/PageContainer'
 import DestinationInfo from '@/components/Destination/DestinationInfo'

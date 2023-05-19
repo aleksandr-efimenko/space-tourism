@@ -1,6 +1,6 @@
 import { Destination } from '@/data/dataTypes'
 import { motion } from 'framer-motion'
-import { PlanetInfoColumn } from '../PlanetInfoColumn'
+import { PlanetInfoColumn } from '@/components/Destination/PlanetInfoColumn'
 
 export default function DestinationInfo({ destination }: { destination: Destination }) {
   return (

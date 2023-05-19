@@ -6,9 +6,9 @@ import { useRouter } from 'next/router'
 import { BackgroundImage } from '@/components/BackgroundImage'
 import { websiteStructure } from '@/data/websiteStructure'
 import { bellefair, barlowCondensed, barlow } from '@/styles/fonts'
-import { MainMenuDesktop } from '@/components/MainMenuDesktop'
+import { MainMenuDesktop } from '@/components/MainMenu/MainMenuDesktop'
 import { useEffect, useState } from 'react'
-import { MainMenuMobile } from './MainMenuMobile'
+import { MainMenuMobile } from './MainMenu/MainMenuMobile'
 import { isMobile } from 'react-device-detect'
 
 export function Layout({ children }: { children: React.ReactNode }) {

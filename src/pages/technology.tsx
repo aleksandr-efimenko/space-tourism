@@ -1,4 +1,4 @@
-import { NumberedSlider } from '@/components/NumberedSlider'
+import { NumberedSlider } from '@/components/Sliders/NumberedSlider'
 import data from '@/data/data.json'
 import { useEffect, useState } from 'react'
 import PageTitle from '@/components/PageTitle'

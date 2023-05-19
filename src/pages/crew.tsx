@@ -1,5 +1,5 @@
 import data from '@/data/data.json'
-import { WhiteDotsSlider } from '@/components/WhiteDotsSlider'
+import { WhiteDotsSlider } from '@/components/Sliders/WhiteDotsSlider'
 import { useEffect, useState } from 'react'
 import PageTitle from '@/components/PageTitle'
 import CrewInfo from '@/components/Crew/CrewInfo'
