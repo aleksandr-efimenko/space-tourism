@@ -8,19 +8,19 @@ export interface TopLevel {
 
 export interface Crew {
   name: string
-  images: CrewImages
+  images: Images
   role: string
   bio: string
 }
 
-export interface CrewImages {
+export interface Images {
   png: string
   webp: string
 }
 
 export interface Destination {
   name: string
-  images: CrewImages
+  images: Images
   description: string
   distance: string
   travel: string
