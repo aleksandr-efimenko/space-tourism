@@ -8,12 +8,10 @@ import PageContainer from '@/components/PageContainer'
 import { BackgroundImage } from '@/components/BackgroundImage'
 import bgImageDesktop from '~/assets/crew/background-crew-desktop.jpg'
 import bgImageTablet from '~/assets/crew/background-crew-tablet.jpg'
-import { useMediaQuery } from 'react-responsive'
 
 export default function Crew() {
   const { crew } = data
   const [crewMemberIndex, setCrewMemberIndex] = useState(0)
-  const isTabletOrMobile = useMediaQuery({ query: '(max-width: 1024px)' })
 
   return (
     <>
@@ -43,7 +41,7 @@ export default function Crew() {
           <CrewImageSlider crewMember={crew[crewMemberIndex]} />
         </div>
       </PageContainer>
-      <BackgroundImage backgroundImage={isTabletOrMobile ? bgImageTablet : bgImageDesktop} alt='background image' />
+      <BackgroundImage backgroundImages={{ desktop: bgImageDesktop, mobile: bgImageTablet }} alt='background image' />
     </>
   )
 }

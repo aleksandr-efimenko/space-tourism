@@ -42,16 +42,16 @@ export default function Technology() {
         </div>
 
         <TechnologyImageSlider
-          className='relative w-full 
+          className='relative w-full h-44
                       row-start-2 row-end-3 mt-8 mb-[2.125rem]
-                      md:mt-[3.75rem] md:mb-14 md:h-80 
+                      md:mt-[3.75rem] md:mb-14 md:h-80
                       lg:row-start-1 lg:row-end-4 lg:h-full lg:my-0 
                       lg:col-start-9 lg:col-end-13'
           images={technology[technologyIndex].images}
           imageType={isTabletOrMobile ? 'landscape' : 'portrait'}
         />
       </PageContainer>
-      <BackgroundImage backgroundImage={isTabletOrMobile ? bgImageTablet : bgImageDesktop} alt='background image' />
+      <BackgroundImage backgroundImages={{ desktop: bgImageDesktop, mobile: bgImageTablet }} alt='background image' />
     </>
   )
 }

@@ -3,13 +3,10 @@ import { ExploreButton } from '@/components/ExploreButton'
 import MainPageInfo from '@/components/MainPage/MainPageInfo'
 import PageContainer from '@/components/PageContainer'
 import { motion } from 'framer-motion'
-import { useMediaQuery } from 'react-responsive'
 import bgImageDesktop from '~/assets/home/background-home-desktop.jpg'
 import bgImageTablet from '~/assets/home/background-home-tablet.jpg'
 
 export default function Home() {
-  const isTabletOrMobile = useMediaQuery({ query: '(max-width: 1024px)' })
-
   return (
     <>
       <PageContainer additionalClassNames='px-6'>
@@ -33,7 +30,7 @@ export default function Home() {
           <ExploreButton />
         </motion.div>
       </PageContainer>
-      <BackgroundImage backgroundImage={isTabletOrMobile ? bgImageTablet : bgImageDesktop} alt='background image' />
+      <BackgroundImage backgroundImages={{ desktop: bgImageDesktop, mobile: bgImageTablet }} alt='background image' />
     </>
   )
 }

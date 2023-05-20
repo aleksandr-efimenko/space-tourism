@@ -8,12 +8,10 @@ import DestinationImageSlider from '@/components/Destination/DestinationImageSli
 import { BackgroundImage } from '@/components/BackgroundImage'
 import bgImageDesktop from '~/assets/destination/background-destination-desktop.jpg'
 import bgImageTablet from '~/assets/destination/background-destination-tablet.jpg'
-import { useMediaQuery } from 'react-responsive'
 
 export default function Destination() {
   const { destinations } = data
   const [destinationIndex, setDestinationIndex] = useState(0)
-  const isTabletOrMobile = useMediaQuery({ query: '(max-width: 1024px)' })
 
   return (
     <>
@@ -40,7 +38,7 @@ export default function Destination() {
           <DestinationInfo destination={destinations[destinationIndex]} />
         </div>
       </PageContainer>
-      <BackgroundImage backgroundImage={isTabletOrMobile ? bgImageTablet : bgImageDesktop} alt='background image' />
+      <BackgroundImage backgroundImages={{ desktop: bgImageDesktop, mobile: bgImageTablet }} alt='background image' />
     </>
   )
 }

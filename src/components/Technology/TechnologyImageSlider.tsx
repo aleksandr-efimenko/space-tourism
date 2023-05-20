@@ -19,7 +19,7 @@ export type TechnologyImageSliderSettings = {
 export default function TechnologyImageSlider({ images, imageType, className }: TechnologyImageSliderProps) {
   const [settings, setSettings] = useState<TechnologyImageSliderSettings>({
     image: '',
-    objectFit: 'contain',
+    objectFit: 'cover',
     initial: { x: '0', y: '-5rem', opacity: 0 },
     animate: { x: '0', y: '0', opacity: 1 },
   })
@@ -50,12 +50,15 @@ export default function TechnologyImageSlider({ images, imageType, className }: 
         transition={{ duration: 0.5 }}
         className={className}
       >
-        <Image
-          alt='space explorer'
-          src={settings.image}
-          fill
-          style={{ objectFit: settings.objectFit, objectPosition: 'center' }}
-        />
+        {settings.image && (
+          <Image
+            priority
+            alt='space explorer'
+            src={settings.image}
+            fill
+            style={{ objectFit: settings.objectFit, objectPosition: 'center' }}
+          />
+        )}
       </motion.div>
     </>
   )

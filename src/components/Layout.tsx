@@ -13,7 +13,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
   const [mobileMenuVisible, setMobileMenuVisible] = useState(false)
   return (
     <div
-      className={`${bellefair.variable} ${barlowCondensed.variable} ${barlow.variable} text-white max-height-100vh overflow-auto`}
+      className={`${bellefair.variable} ${barlowCondensed.variable} ${barlow.variable} text-white max-height-100vh overflow-auto `}
     >
       <header
         className='absolute w-full flex items-center justify-between p-6 z-40
@@ -44,6 +44,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
       />
 
       <main>{children}</main>
+      <div className='bg-slate-800 -z-40 absolute inset-0'></div>
     </div>
   )
 }
