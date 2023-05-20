@@ -12,7 +12,7 @@ export default function Destination() {
 
   return (
     <>
-      <PageContainer>
+      <PageContainer additionalClassNames='px-6'>
         <PageTitle number='01' title='Pick your destination' />
         <div
           className=' mt-8

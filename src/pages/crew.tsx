@@ -12,7 +12,7 @@ export default function Crew() {
 
   return (
     <>
-      <PageContainer>
+      <PageContainer additionalClassNames='px-6'>
         <PageTitle number='02' title='Meet your crew' />
         <div
           className='flex flex-col-reverse justify-end items-center 

@@ -6,7 +6,7 @@ import { motion } from 'framer-motion'
 export default function Home() {
   return (
     <>
-      <PageContainer>
+      <PageContainer additionalClassNames='px-6'>
         <div
           className='flex flex-col justify-end mx-auto
           md:pt-16 md:w-9/12 md:row-start-1 md:row-end-2
