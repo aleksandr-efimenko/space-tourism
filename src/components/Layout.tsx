@@ -10,19 +10,6 @@ import { MainMenuMobile } from './MainMenu/MainMenuMobile'
 
 export function Layout({ children }: { children: React.ReactNode }) {
   const router = useRouter()
-  // const [backgroundImage, setBackgroundImage] = useState<string>('')
-  // useEffect(() => {
-  //   /**
-  //    *  Get the background image for the current page from the websiteStructure array
-  //    *  depending on the device type
-  //    */
-  //   const backgroundImageItem = websiteStructure.find((item) => item.path === router.pathname)
-  //   const backgroundImage = isMobile
-  //     ? backgroundImageItem?.backgroundImageMobile
-  //     : backgroundImageItem?.backgroundImageDesktop
-  //   setBackgroundImage(backgroundImage || '')
-  // }, [router.pathname])
-
   const [mobileMenuVisible, setMobileMenuVisible] = useState(false)
   return (
     <div
