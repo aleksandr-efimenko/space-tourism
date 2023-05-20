@@ -30,7 +30,7 @@ export default function Crew() {
           </div>
         </div>
         <div
-          className=' w-full overflow-hidden
+          className='w-full overflow-hidden
           h-56 row-start-2 row-end-3 my-8
           md:h-full md:row-start-3 md:row-end-4 md:my-0
         lg:row-start-1 lg:row-end-4 lg:col-start-8 lg:col-end-12 '
