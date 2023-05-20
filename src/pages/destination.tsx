@@ -23,8 +23,8 @@ export default function Destination() {
         </div>
         <div
           className='flex flex-col items-center h-full justify-start
-            mt-[1.625rem] px-6
-            md:px-0 md:pt-[3.3125rem] md:w-9/12 md:m-auto md:text-center
+            pt-[1.625rem]
+            md:px-0 md:pt-[2rem] md:pb-4 md:w-9/12 md:m-auto md:text-center
           lg:mt-0       lg:w-full  lg:items-start lg:text-left lg:col-start-7 lg:col-end-12 lg:row-start-1 lg:row-end-3'
         >
           <TextSlider

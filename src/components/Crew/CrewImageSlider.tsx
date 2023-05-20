@@ -22,7 +22,7 @@ export default function CrewImageSlider({ crewMember }: { crewMember: Crew }) {
             objectPosition: 'bottom',
           }}
         />
-        <div className='block md:hidden w-full px-6'>
+        <div className='block md:hidden w-full'>
           <hr className='border-gray border-1' />
         </div>
       </motion.div>
