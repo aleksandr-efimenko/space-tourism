@@ -4,11 +4,12 @@ import { useEffect, useState } from 'react'
 import PageTitle from '@/components/PageTitle'
 import PageContainer from '@/components/PageContainer'
 import TechnologyInfo from '@/components/Technology/TechnologyInfo'
-import TechnologyImageSlider from '@/components/Technology/TechnologyImageSlider'
 import { BackgroundImage } from '@/components/BackgroundImage'
 import bgImageDesktop from '~/assets/technology/background-technology-desktop.jpg'
 import bgImageTablet from '~/assets/technology/background-technology-tablet.jpg'
 import { useMediaQuery } from 'react-responsive'
+import dynamic from 'next/dynamic'
+const TechnologyImageSlider = dynamic(() => import('@/components/Technology/TechnologyImageSlider'), { ssr: false })
 
 export default function Technology() {
   const { technology } = data
@@ -20,7 +21,6 @@ export default function Technology() {
   //   }, 5000)
   //   return () => clearInterval(interval)
   // }, [technology])
-
   return (
     <>
       <PageContainer>
@@ -42,7 +42,7 @@ export default function Technology() {
         </div>
 
         <TechnologyImageSlider
-          className='relative w-full h-44
+          className='relative w-full 
                       row-start-2 row-end-3 mt-8 mb-[2.125rem]
                       md:mt-[3.75rem] md:mb-14 md:h-80 
                       lg:row-start-1 lg:row-end-4 lg:h-full lg:my-0 
