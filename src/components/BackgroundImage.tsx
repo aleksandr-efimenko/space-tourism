@@ -11,6 +11,7 @@ export function BackgroundImage({ backgroundImage, alt }: BackgroundImageProps) 
       {backgroundImage && (
         <Image
           priority
+          loading='eager'
           src={backgroundImage}
           alt={alt}
           quality={95}
