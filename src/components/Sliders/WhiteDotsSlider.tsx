@@ -9,7 +9,7 @@ export function WhiteDotsSlider({ itemsNumber, currentIndex, setIndex }: Numbere
         <motion.div
           whileHover={{ scale: 1.2 }}
           key={index}
-          className={`w-[15px] h-[15px] rounded-full bg-white cursor-pointer 
+          className={`w-[10px] h-[10px] md:w-[15px] md:h-[15px] rounded-full bg-white cursor-pointer 
           ${currentIndex === index ? 'opacity-1' : 'opacity-[0.17]  hover:opacity-50'}`}
           onClick={() => setIndex(index)}
         />
