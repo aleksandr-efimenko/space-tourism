@@ -23,7 +23,8 @@ export default function CrewInfo({ crewMember }: { crewMember: Crew }) {
         {crewMember.name}
       </motion.h3>
       <motion.p
-        className='text-paleblue max-w-[70%]'
+        key={crewMember.bio.slice(0, 20)}
+        className='text-paleblue lg:max-w-[70%]'
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.8 }}

@@ -13,7 +13,8 @@ module.exports = {
         'page-container': 'minmax(5rem, 1fr) repeat(10, minmax(0, 1fr)) minmax(2rem, 1fr)',
       },
       gridTemplateRows: {
-        'page-container': 'repeat(3, auto)',
+        'page-container-mobile': 'repeat(2, auto) 1fr',
+        'page-container-desktop': 'repeat(3, auto)',
       },
       colors: {
         darkspace: 'var(--color-darkspace)',

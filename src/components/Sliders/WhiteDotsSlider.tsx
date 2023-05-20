@@ -4,7 +4,7 @@ import { NumberedSliderProps } from '@/utils/SliderProps'
 export function WhiteDotsSlider({ itemsNumber, currentIndex, setIndex }: NumberedSliderProps) {
   const items = Array.from(Array(itemsNumber).keys())
   return (
-    <div className='flex gap-6 justify-center items-center'>
+    <div className='flex gap-6 justify-start'>
       {items.map((index) => (
         <motion.div
           whileHover={{ scale: 1.2 }}
