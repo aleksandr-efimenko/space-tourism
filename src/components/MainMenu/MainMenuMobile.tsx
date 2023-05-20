@@ -32,8 +32,8 @@ export function MainMenuMobile({
             exit={{ x: '100%' }}
             transition={{ type: 'spring', duration: 0.5 }}
           >
-            <div className='w-2/6 h-screen' onClick={closeMobileMenu}></div>
-            <div className='w-4/6 h-screen menu-bg-filter'>
+            <div className='w-2/6 min-height-100vh' onClick={closeMobileMenu}></div>
+            <div className='w-4/6 min-height-100vh menu-bg-filter'>
               <button className='absolute top-9 right-6' onClick={closeMobileMenu}>
                 <Image src={closeIcon} alt='close icon' width={20} height={20} />
               </button>
