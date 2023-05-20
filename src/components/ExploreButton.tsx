@@ -1,15 +1,17 @@
 import { motion } from 'framer-motion'
-import { isMobile } from 'react-device-detect'
+import { useMediaQuery } from 'react-responsive'
 
 export function ExploreButton() {
+  const isTabletOrMobile = useMediaQuery({ query: '(max-width: 1024px)' })
+
   const whilteHoverStyle = {
     outlineColor: 'hsla(0, 0%, 100%, 0.1)',
     outlineStyle: 'solid',
-    outlineWidth: isMobile ? '1rem' : '4rem',
+    outlineWidth: isTabletOrMobile ? '1rem' : '4rem',
   }
   const whileTapStyle = {
     scale: 1.1,
-    outlineWidth: isMobile ? '1rem' : '3rem',
+    outlineWidth: isTabletOrMobile ? '1rem' : '3rem',
   }
 
   return (

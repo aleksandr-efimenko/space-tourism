@@ -5,15 +5,15 @@ import PageTitle from '@/components/PageTitle'
 import PageContainer from '@/components/PageContainer'
 import TechnologyInfo from '@/components/Technology/TechnologyInfo'
 import TechnologyImageSlider from '@/components/Technology/TechnologyImageSlider'
-import { isMobile } from 'react-device-detect'
 import { BackgroundImage } from '@/components/BackgroundImage'
 import bgImageDesktop from '~/assets/technology/background-technology-desktop.jpg'
 import bgImageTablet from '~/assets/technology/background-technology-tablet.jpg'
+import { useMediaQuery } from 'react-responsive'
 
 export default function Technology() {
   const { technology } = data
   const [technologyIndex, setTechnologyIndex] = useState(0)
-
+  const isTabletOrMobile = useMediaQuery({ query: '(max-width: 1024px)' })
   // useEffect(() => {
   //   const interval = setInterval(() => {
   //     setTechnologyIndex((prev) => (prev + 1) % technology.length)
@@ -48,10 +48,10 @@ export default function Technology() {
                       lg:row-start-1 lg:row-end-4 lg:h-full lg:my-0 
                       lg:col-start-9 lg:col-end-13'
           images={technology[technologyIndex].images}
-          imageType={isMobile ? 'landscape' : 'portrait'}
+          imageType={isTabletOrMobile ? 'landscape' : 'portrait'}
         />
       </PageContainer>
-      <BackgroundImage backgroundImage={isMobile ? bgImageTablet : bgImageDesktop} alt='background image' />
+      <BackgroundImage backgroundImage={isTabletOrMobile ? bgImageTablet : bgImageDesktop} alt='background image' />
     </>
   )
 }
