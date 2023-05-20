@@ -6,6 +6,9 @@ import PageContainer from '@/components/PageContainer'
 import TechnologyInfo from '@/components/Technology/TechnologyInfo'
 import TechnologyImageSlider from '@/components/Technology/TechnologyImageSlider'
 import { isMobile } from 'react-device-detect'
+import { BackgroundImage } from '@/components/BackgroundImage'
+import bgImageDesktop from '~/assets/technology/background-technology-desktop.jpg'
+import bgImageTablet from '~/assets/technology/background-technology-tablet.jpg'
 
 export default function Technology() {
   const { technology } = data
@@ -48,6 +51,7 @@ export default function Technology() {
           imageType={isMobile ? 'landscape' : 'portrait'}
         />
       </PageContainer>
+      <BackgroundImage backgroundImage={isMobile ? bgImageTablet : bgImageDesktop} alt='background image' />
     </>
   )
 }

@@ -1,7 +1,11 @@
+import { BackgroundImage } from '@/components/BackgroundImage'
 import { ExploreButton } from '@/components/ExploreButton'
 import MainPageInfo from '@/components/MainPage/MainPageInfo'
 import PageContainer from '@/components/PageContainer'
 import { motion } from 'framer-motion'
+import bgImageDesktop from '~/assets/home/background-home-desktop.jpg'
+import bgImageTablet from '~/assets/home/background-home-tablet.jpg'
+import { isMobile } from 'react-device-detect'
 
 export default function Home() {
   return (
@@ -27,6 +31,7 @@ export default function Home() {
           <ExploreButton />
         </motion.div>
       </PageContainer>
+      <BackgroundImage backgroundImage={isMobile ? bgImageTablet : bgImageDesktop} alt='background image' />
     </>
   )
 }

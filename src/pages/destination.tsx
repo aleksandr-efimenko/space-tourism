@@ -5,6 +5,10 @@ import PageTitle from '@/components/PageTitle'
 import PageContainer from '@/components/PageContainer'
 import DestinationInfo from '@/components/Destination/DestinationInfo'
 import DestinationImageSlider from '@/components/Destination/DestinationImageSlider'
+import { BackgroundImage } from '@/components/BackgroundImage'
+import { isMobile } from 'react-device-detect'
+import bgImageDesktop from '~/assets/destination/background-destination-desktop.jpg'
+import bgImageTablet from '~/assets/destination/background-destination-tablet.jpg'
 
 export default function Destination() {
   const { destinations } = data
@@ -35,6 +39,7 @@ export default function Destination() {
           <DestinationInfo destination={destinations[destinationIndex]} />
         </div>
       </PageContainer>
+      <BackgroundImage backgroundImage={isMobile ? bgImageTablet : bgImageDesktop} alt='background image' />
     </>
   )
 }

@@ -3,28 +3,25 @@ import Image from 'next/image'
 import logo from '~/assets/shared/logo.svg'
 import hamburgerIcon from '~/assets/shared/icon-hamburger.svg'
 import { useRouter } from 'next/router'
-import { BackgroundImage } from '@/components/BackgroundImage'
-import { websiteStructure } from '@/data/websiteStructure'
 import { bellefair, barlowCondensed, barlow } from '@/styles/fonts'
 import { MainMenuDesktop } from '@/components/MainMenu/MainMenuDesktop'
 import { useEffect, useState } from 'react'
 import { MainMenuMobile } from './MainMenu/MainMenuMobile'
-import { isMobile } from 'react-device-detect'
 
 export function Layout({ children }: { children: React.ReactNode }) {
   const router = useRouter()
-  const [backgroundImage, setBackgroundImage] = useState<string>('')
-  useEffect(() => {
-    /**
-     *  Get the background image for the current page from the websiteStructure array
-     *  depending on the device type
-     */
-    const backgroundImageItem = websiteStructure.find((item) => item.path === router.pathname)
-    const backgroundImage = isMobile
-      ? backgroundImageItem?.backgroundImageMobile
-      : backgroundImageItem?.backgroundImageDesktop
-    setBackgroundImage(backgroundImage || '')
-  }, [router.pathname])
+  // const [backgroundImage, setBackgroundImage] = useState<string>('')
+  // useEffect(() => {
+  //   /**
+  //    *  Get the background image for the current page from the websiteStructure array
+  //    *  depending on the device type
+  //    */
+  //   const backgroundImageItem = websiteStructure.find((item) => item.path === router.pathname)
+  //   const backgroundImage = isMobile
+  //     ? backgroundImageItem?.backgroundImageMobile
+  //     : backgroundImageItem?.backgroundImageDesktop
+  //   setBackgroundImage(backgroundImage || '')
+  // }, [router.pathname])
 
   const [mobileMenuVisible, setMobileMenuVisible] = useState(false)
   return (
@@ -60,7 +57,6 @@ export function Layout({ children }: { children: React.ReactNode }) {
       />
 
       <main>{children}</main>
-      <BackgroundImage backgroundImage={backgroundImage} alt='background image' />
     </div>
   )
 }
