@@ -19,6 +19,7 @@ export default function DestinationImageSlider({ destination }: { destination: D
         >
           <Image
             priority
+            loading='eager'
             src={destination.images.webp}
             alt={`image of ${destination.name}`}
             fill
