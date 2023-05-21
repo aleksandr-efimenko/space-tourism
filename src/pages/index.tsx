@@ -34,7 +34,7 @@ export default function Home() {
           <ExploreButton onClick={() => setIsModalOpen(true)} />
         </motion.div>
       </PageContainer>
-      {isModalOpen && <ModalWindowAboutMe setIsModalOpen={setIsModalOpen} />}
+      <ModalWindowAboutMe isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen} />
       <BackgroundImage backgroundImages={{ desktop: bgImageDesktop, mobile: bgImageTablet }} alt='background image' />
     </>
   )
