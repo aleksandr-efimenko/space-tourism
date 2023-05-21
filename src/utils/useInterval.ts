@@ -8,12 +8,12 @@ import React, { useState, useEffect, useRef } from 'react'
  * @param callback
  * @param delay
  */
-export function useInterval(callback: () => void | undefined, delay: number | null) {
+export function useInterval(callback: () => void, delay: number | null) {
   const savedCallback = useRef()
 
   // Remember the latest callback.
   useEffect(() => {
-    savedCallback.current = callback
+    savedCallback.current = callback!
   }, [callback])
 
   // Set up the interval.
