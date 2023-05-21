@@ -23,7 +23,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
           className='relative rounded-full bg-white block cursor-pointer
             h-10 w-10 md:h-12 md:w-12 '
         >
-          <Link href='/'>
+          <Link href='/' className='relative'>
             <Image src={logo} alt='logo' fill />
           </Link>
         </div>
@@ -44,7 +44,6 @@ export function Layout({ children }: { children: React.ReactNode }) {
       />
 
       <main>{children}</main>
-      <div className='bg-slate-800 -z-40 absolute inset-0'></div>
     </div>
   )
 }
