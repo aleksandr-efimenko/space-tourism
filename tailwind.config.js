@@ -14,7 +14,8 @@ module.exports = {
       },
       gridTemplateRows: {
         'page-container-mobile': 'repeat(2, auto) 1fr',
-        'page-container-desktop': 'repeat(3, auto)',
+        // 'page-container-desktop': 'repeat(3, auto)',
+        'page-container-desktop': 'auto 70% auto',
       },
       colors: {
         darkspace: 'var(--color-darkspace)',

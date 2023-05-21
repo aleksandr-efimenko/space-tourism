@@ -19,14 +19,14 @@ export function Layout({ children }: { children: React.ReactNode }) {
         className='absolute w-full flex items-center justify-between p-6 z-40
         md:py-0 md:pr-0 md:pl-10 lg:pl-14 lg:top-10'
       >
-        <div
-          className='relative rounded-full bg-white block cursor-pointer
+        <Link href='/'>
+          <div
+            className='relative rounded-full bg-white block cursor-pointer
             h-10 w-10 md:h-12 md:w-12 '
-        >
-          <Link href='/' className='relative'>
+          >
             <Image src={logo} alt='logo' fill />
-          </Link>
-        </div>
+          </div>
+        </Link>
         <hr
           className='relative hidden flex-auto z-10 opacity-25 bg-white h-[1px]
            lg:ml-[2%] left-[2.5%] lg:block'

@@ -1,7 +1,7 @@
 import { TextSliderProps } from '@/utils/SliderProps'
 import Link from 'next/link'
 
-export function TextSlider({ items, currentIndex, setIndex }: TextSliderProps) {
+export function TextSlider({ items, currentIndex, handleSwitch }: TextSliderProps) {
   return (
     <div className='flex gap-[1.625rem] md:gap-[2.1875rem] text-paleblue uppercase  nav-text'>
       {items.map((item, i) => {
@@ -15,7 +15,7 @@ export function TextSlider({ items, currentIndex, setIndex }: TextSliderProps) {
                 `
                 : 'hover:underline hover:decoration-[0.1875rem] hover:underline-offset-[0.75rem] hover:decoration-[hsl(0,0%,59%)]'
             }`}
-            onClick={() => setIndex(i)}
+            onClick={() => handleSwitch(i)}
           >
             {item}
           </Link>

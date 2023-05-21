@@ -8,10 +8,29 @@ import DestinationImageSlider from '@/components/Destination/DestinationImageSli
 import { BackgroundImage } from '@/components/BackgroundImage'
 import bgImageDesktop from '~/assets/destination/background-destination-desktop.jpg'
 import bgImageTablet from '~/assets/destination/background-destination-tablet.jpg'
+import { useInterval } from '@/utils/useInterval'
 
 export default function Destination() {
   const { destinations } = data
   const [destinationIndex, setDestinationIndex] = useState(0)
+  const [delay] = useState(5000)
+  const [sliderIsRunning, setSliderIsRunning] = useState(true)
+
+  useInterval(
+    () => {
+      setDestinationIndex((destinationIndex + 1) % destinations.length)
+    },
+    sliderIsRunning ? delay : null
+  )
+
+  // this is used to reset the slider when the user switches to another image
+  const handleSwitch = (index: number) => {
+    setDestinationIndex(index)
+    setSliderIsRunning(false)
+    setTimeout(() => {
+      setSliderIsRunning(true)
+    }, delay * 2)
+  }
 
   return (
     <>
@@ -33,7 +52,7 @@ export default function Destination() {
           <TextSlider
             items={destinations.map((item) => item.name)}
             currentIndex={destinationIndex}
-            setIndex={setDestinationIndex}
+            handleSwitch={handleSwitch}
           />
           <DestinationInfo destination={destinations[destinationIndex]} />
         </div>

@@ -9,17 +9,31 @@ import { BackgroundImage } from '@/components/BackgroundImage'
 import bgImageDesktop from '~/assets/technology/background-technology-desktop.jpg'
 import bgImageTablet from '~/assets/technology/background-technology-tablet.jpg'
 import { useMediaQuery } from 'react-responsive'
+import { useInterval } from '@/utils/useInterval'
 
 export default function Technology() {
   const { technology } = data
   const [technologyIndex, setTechnologyIndex] = useState(0)
   const isTabletOrMobile = useMediaQuery({ query: '(max-width: 1024px)' })
-  // useEffect(() => {
-  //   const interval = setInterval(() => {
-  //     setTechnologyIndex((prev) => (prev + 1) % technology.length)
-  //   }, 5000)
-  //   return () => clearInterval(interval)
-  // }, [technology])
+
+  const [delay] = useState(5000)
+  const [sliderIsRunning, setSliderIsRunning] = useState(true)
+
+  useInterval(
+    () => {
+      setTechnologyIndex((technologyIndex + 1) % technology.length)
+    },
+    sliderIsRunning ? delay : null
+  )
+
+  // this is used to reset the slider when the user switches to another image
+  const handleSwitch = (index: number) => {
+    setTechnologyIndex(index)
+    setSliderIsRunning(false)
+    setTimeout(() => {
+      setSliderIsRunning(true)
+    }, delay * 2)
+  }
 
   return (
     <>
@@ -33,7 +47,7 @@ export default function Technology() {
             <NumberedSlider
               itemsNumber={technology.length}
               currentIndex={technologyIndex}
-              setIndex={setTechnologyIndex}
+              handleSwitch={handleSwitch}
             />
             <div className='lg:pr-4 lg:w-full'>
               <TechnologyInfo technology={technology[technologyIndex]} />

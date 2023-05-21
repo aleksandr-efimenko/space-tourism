@@ -1,6 +1,6 @@
 type SliderProps = {
   currentIndex: number
-  setIndex: (index: number) => void
+  handleSwitch: (index: number) => void
 }
 
 export type TextSliderProps = SliderProps & {
