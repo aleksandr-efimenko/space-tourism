@@ -2,10 +2,15 @@ import Image from 'next/image'
 import { motion } from 'framer-motion'
 import { Destination } from '@/data/dataTypes'
 import blurDestinationImage from '~/assets/destination/blur-destination-image.jpg'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 export default function DestinationImageSlider({ destination }: { destination: Destination }) {
   const [isLoading, setLoading] = useState(true)
+
+  useEffect(() => {
+    setLoading(true)
+  }, [destination])
+
   return (
     <>
       <motion.div
