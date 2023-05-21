@@ -17,6 +17,8 @@ export type TechnologyImageSliderSettings = {
 }
 
 export default function TechnologyImageSlider({ images, imageType, className }: TechnologyImageSliderProps) {
+  const [isLoading, setLoading] = useState(true)
+
   const [settings, setSettings] = useState<TechnologyImageSliderSettings>({
     image: '',
     objectFit: 'cover',
@@ -57,6 +59,10 @@ export default function TechnologyImageSlider({ images, imageType, className }: 
             src={settings.image}
             fill
             style={{ objectFit: settings.objectFit, objectPosition: 'center' }}
+            className={`
+            duration-500 ease-in-out group-hover:opacity-75
+            ${isLoading ? 'scale-110 blur-2xl grayscale' : 'scale-100 blur-0 grayscale-0'})`}
+            onLoadingComplete={() => setLoading(false)}
           />
         )}
       </motion.div>

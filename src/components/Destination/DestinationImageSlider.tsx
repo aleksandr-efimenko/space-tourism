@@ -1,8 +1,11 @@
 import Image from 'next/image'
 import { motion } from 'framer-motion'
 import { Destination } from '@/data/dataTypes'
+import blurDestinationImage from '~/assets/destination/blur-destination-image.jpg'
+import { useState } from 'react'
 
 export default function DestinationImageSlider({ destination }: { destination: Destination }) {
+  const [isLoading, setLoading] = useState(true)
   return (
     <>
       <motion.div
@@ -18,12 +21,14 @@ export default function DestinationImageSlider({ destination }: { destination: D
           lg:w-[27.8125rem] lg:h-[27.8125rem]'
         >
           <Image
-            priority
-            loading='eager'
             src={destination.images.webp}
             alt={`image of ${destination.name}`}
             fill
             style={{ objectFit: 'contain', objectPosition: 'center' }}
+            className={`
+            duration-500 ease-in-out group-hover:opacity-75
+            ${isLoading ? 'scale-110 blur-2xl grayscale' : 'scale-100 blur-0 grayscale-0'})`}
+            onLoadingComplete={() => setLoading(false)}
           />
         </div>
       </motion.div>

@@ -56,7 +56,7 @@ export default function Technology() {
         </div>
 
         <TechnologyImageSlider
-          className='relative w-full h-44
+          className='relative w-full h-44 overflow-hidden
                       row-start-2 row-end-3 mt-8 mb-[2.125rem]
                       md:mt-[3.75rem] md:mb-14 md:h-80
                       lg:row-start-1 lg:row-end-4 lg:h-full lg:my-0 
