@@ -18,9 +18,17 @@ export type TechnologyImageSliderSettings = {
 
 export default function TechnologyImageSlider({ images, imageType, className }: TechnologyImageSliderProps) {
   const [isLoading, setLoading] = useState(true)
+  const [loadedImages, setLoadedImages] = useState<string[]>([])
+
   useEffect(() => {
+    if (loadedImages.includes(images.portrait)) return
     setLoading(true)
-  }, [images])
+  }, [images, loadedImages])
+
+  const handleImageLoad = (src: string) => {
+    setLoading(false)
+    setLoadedImages((prev) => [...prev, src])
+  }
 
   const [settings, setSettings] = useState<TechnologyImageSliderSettings>({
     image: '',
@@ -65,7 +73,7 @@ export default function TechnologyImageSlider({ images, imageType, className }: 
             className={`
             duration-500 ease-in-out group-hover:opacity-75
             ${isLoading ? 'scale-110 blur-2xl grayscale' : 'scale-100 blur-0 grayscale-0'})`}
-            onLoadingComplete={() => setLoading(false)}
+            onLoadingComplete={() => handleImageLoad(settings.image)}
           />
         )}
       </motion.div>

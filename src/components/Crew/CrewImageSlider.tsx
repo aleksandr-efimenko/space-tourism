@@ -5,9 +5,15 @@ import { use, useEffect, useState } from 'react'
 
 export default function CrewImageSlider({ crewMember }: { crewMember: Crew }) {
   const [isLoading, setLoading] = useState(true)
+  const [loadedImages, setLoadedImages] = useState<string[]>([])
   useEffect(() => {
+    if (loadedImages.includes(crewMember.images.webp)) return
     setLoading(true)
-  }, [crewMember])
+  }, [crewMember, loadedImages])
+  const handleImageLoad = (src: string) => {
+    setLoading(false)
+    setLoadedImages((prev) => [...prev, src])
+  }
 
   return (
     <>
@@ -30,7 +36,7 @@ export default function CrewImageSlider({ crewMember }: { crewMember: Crew }) {
           className={`
           duration-500 ease-in-out group-hover:opacity-75
           ${isLoading ? 'scale-110 blur-2xl grayscale' : 'scale-100 blur-0 grayscale-0'})`}
-          onLoadingComplete={() => setLoading(false)}
+          onLoadingComplete={() => handleImageLoad(crewMember.images.webp)}
         />
         <div className='block md:hidden w-full'>
           <hr className='border-gray border-1' />

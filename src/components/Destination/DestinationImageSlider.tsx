@@ -6,11 +6,17 @@ import { useEffect, useState } from 'react'
 
 export default function DestinationImageSlider({ destination }: { destination: Destination }) {
   const [isLoading, setLoading] = useState(true)
+  const [loadedImages, setLoadedImages] = useState<string[]>([])
 
   useEffect(() => {
+    if (loadedImages.includes(destination.images.webp)) return
     setLoading(true)
-  }, [destination])
+  }, [destination, loadedImages])
 
+  const handleImageLoad = (src: string) => {
+    setLoading(false)
+    setLoadedImages((prev) => [...prev, src])
+  }
   return (
     <>
       <motion.div
@@ -33,7 +39,7 @@ export default function DestinationImageSlider({ destination }: { destination: D
             className={`
             duration-500 ease-in-out group-hover:opacity-75
             ${isLoading ? 'scale-110 blur-2xl grayscale' : 'scale-100 blur-0 grayscale-0'})`}
-            onLoadingComplete={() => setLoading(false)}
+            onLoadingComplete={() => handleImageLoad(destination.images.webp)}
           />
         </div>
       </motion.div>
