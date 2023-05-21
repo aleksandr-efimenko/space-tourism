@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion'
 import { useMediaQuery } from 'react-responsive'
 
-export function ExploreButton() {
+export function ExploreButton({ onClick }: { onClick: () => void }) {
   const isTabletOrMobile = useMediaQuery({ query: '(max-width: 1024px)' })
 
   const whilteHoverStyle = {
@@ -24,6 +24,7 @@ export function ExploreButton() {
                 '
       whileHover={whilteHoverStyle}
       whileTap={whileTapStyle}
+      onClick={onClick}
     >
       <p className='explore-button-text text-darkspace'>EXPLORE</p>
     </motion.a>

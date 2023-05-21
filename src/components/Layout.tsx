@@ -42,7 +42,6 @@ export function Layout({ children }: { children: React.ReactNode }) {
         currentPathname={router.pathname}
         closeMobileMenu={() => setMobileMenuVisible(false)}
       />
-
       <main>{children}</main>
     </div>
   )
