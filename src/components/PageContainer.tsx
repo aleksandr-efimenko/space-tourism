@@ -8,7 +8,7 @@ export default function PageContainer({ children, additionalClassNames }: PageCo
     <div
       className={`min-height-100vh w-full text-center grid 
           pt-[5.5rem] pb-0
-          md:pt-28  md:px-0 md:grid-flow-col
+          md:pt-28  md:px-0 md:grid-flow-row-dense
              grid-rows-page-container-mobile
           lg:grid-rows-page-container-desktop
           lg:grid-cols-page-container 
