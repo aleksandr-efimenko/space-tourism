@@ -44,7 +44,7 @@ export default function Crew() {
           md:gap-10 md:mt-14 md:mb-10
           lg:gap-28 lg:items-start lg:col-start-2 lg:col-end-8'
         >
-          <div className='mt-8 md:mt-0 h-full'>
+          <div className='mt-8 md:mt-0 h-full md:min-h-[13.5rem]'>
             <CrewInfo crewMember={crew[crewMemberIndex]} />
           </div>
           <div className=''>
