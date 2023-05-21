@@ -19,23 +19,22 @@ export type TechnologyImageSliderSettings = {
 export default function TechnologyImageSlider({ images, imageType, className }: TechnologyImageSliderProps) {
   const [isLoading, setLoading] = useState(true)
   const [loadedImages, setLoadedImages] = useState<string[]>([])
-
-  useEffect(() => {
-    if (loadedImages.includes(images.portrait)) return
-    setLoading(true)
-  }, [images, loadedImages])
-
-  const handleImageLoad = (src: string) => {
-    setLoading(false)
-    setLoadedImages((prev) => [...prev, src])
-  }
-
   const [settings, setSettings] = useState<TechnologyImageSliderSettings>({
     image: '',
     objectFit: 'cover',
     initial: { x: '0', y: '-5rem', opacity: 0 },
     animate: { x: '0', y: '0', opacity: 1 },
   })
+
+  useEffect(() => {
+    if (loadedImages.includes(settings.image)) return
+    setLoading(true)
+  }, [settings.image, loadedImages])
+
+  const handleImageLoad = (src: string) => {
+    setLoading(false)
+    setLoadedImages((prev) => [...prev, src])
+  }
 
   useEffect(() => {
     if (imageType === 'landscape') {
