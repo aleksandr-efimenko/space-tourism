@@ -1,38 +1,67 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Frontend Mentor - Space tourism website solution
 
-## Getting Started
+This is a solution to the [Space tourism website challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/space-tourism-multipage-website-gRWj1URZ3).
 
-First, run the development server:
+## Table of contents
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Screenshot](#screenshot)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [Useful resources](#useful-resources)
+- [Author](#author)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Overview
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+This is a website for a space tourism company. It has 3 pages: home, destinations and about. The home page has a slider with 3 slides. The destinations page has a list of destinations. The about page has a list of team members.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+### The challenge
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+Users should be able to:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- View the optimal layout for each of the website's pages depending on their device's screen size
+- See hover states for all interactive elements on the page
+- View each page and be able to toggle between the tabs to see new information
 
-## Learn More
+### Video Walkthrough
 
-To learn more about Next.js, take a look at the following resources:
+### Screenshots
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+#### Desktop
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+![Design prevew for the desktop version](/public/about/screenshot_desktop.png)
 
-## Deploy on Vercel
+#### Tablet
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+![Design prevew for the tablet version](/public/about/screenshot_tablet.png)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+#### Mobile
+
+![Design prevew for the mobile version](/public/about/screenshot_mobile.png)
+
+### Links
+
+- Solution URL: [https://github.com/aleksandr-efimenko/space-tourism-website-frontendmentor](https://github.com/aleksandr-efimenko/space-tourism-website-frontendmentor)
+- Live Site URL: [https://space-tourism-website-frontendmentor-zeta.vercel.app/](https://space-tourism-website-frontendmentor-zeta.vercel.app/)
+
+## My process
+
+### Built with
+
+- [TypeScript](https://www.typescriptlang.org/) - For type checking
+- [Next.js](https://nextjs.org/) - React framework
+- [Tailwind CSS](https://tailwindcss.com/) - For styles
+- [Framer motion](https://www.framer.com/motion/) - For animations
+
+### Useful resources
+
+- [Making setInterval Declarative with React Hooks by Dan Abramov](https://overreacted.io/making-setinterval-declarative-with-react-hooks/) - This helped me to create a custom hook for setInterval.
+  [Typescript implementation](https://usehooks-ts.com/react-hook/use-interval) of this hook was also helpful.
+
+## Author
+
+- Website - [Alex Efimenko](https://alexefimenko.com/)
+- Frontend Mentor - [My profile](https://www.frontendmentor.io/profile/androidblog)
+- LinkedIn - [@aleksandr-efimenko](https://www.linkedin.com/in/aleksandr-efimenko/)
