@@ -5,9 +5,9 @@ This is a solution to the [Space tourism website challenge on Frontend Mentor](h
 ## Table of contents
 
 - [Overview](#overview)
+  - [Links](#links)
   - [The challenge](#the-challenge)
   - [Screenshot](#screenshot)
-  - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
   - [Useful resources](#useful-resources)
@@ -16,6 +16,11 @@ This is a solution to the [Space tourism website challenge on Frontend Mentor](h
 ## Overview
 
 This is a website for a space tourism company. It has 3 pages: home, destinations and about. The home page has a slider with 3 slides. The destinations page has a list of destinations. The about page has a list of team members.
+
+### Links
+
+- Solution URL: [https://github.com/aleksandr-efimenko/space-tourism-website-frontendmentor](https://github.com/aleksandr-efimenko/space-tourism-website-frontendmentor)
+- Live Site URL: [https://space-tourism-website-frontendmentor-zeta.vercel.app/](https://space-tourism-website-frontendmentor-zeta.vercel.app/)
 
 ### The challenge
 
@@ -26,6 +31,8 @@ Users should be able to:
 - View each page and be able to toggle between the tabs to see new information
 
 ### Video Walkthrough
+
+https://github.com/aleksandr-efimenko/space-tourism-website-frontendmentor/blob/7dcb2b4dece3538328d5c646bb7a15e003f82c13/public/about/Video%20Walkthrough.mp4
 
 ### Screenshots
 
@@ -40,11 +47,6 @@ Users should be able to:
 #### Mobile
 
 ![Design prevew for the mobile version](/public/about/screenshot_mobile.png)
-
-### Links
-
-- Solution URL: [https://github.com/aleksandr-efimenko/space-tourism-website-frontendmentor](https://github.com/aleksandr-efimenko/space-tourism-website-frontendmentor)
-- Live Site URL: [https://space-tourism-website-frontendmentor-zeta.vercel.app/](https://space-tourism-website-frontendmentor-zeta.vercel.app/)
 
 ## My process
 
@@ -63,5 +65,5 @@ Users should be able to:
 ## Author
 
 - Website - [Alex Efimenko](https://alexefimenko.com/)
-- Frontend Mentor - [My profile](https://www.frontendmentor.io/profile/androidblog)
+- Frontend Mentor - [Profile](https://www.frontendmentor.io/profile/androidblog)
 - LinkedIn - [@aleksandr-efimenko](https://www.linkedin.com/in/aleksandr-efimenko/)
