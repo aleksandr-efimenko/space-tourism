@@ -4,6 +4,7 @@ import MainPageInfo from '@/components/MainPage/MainPageInfo'
 import ModalWindowAboutMe from '@/components/ModalWindowAboutMe'
 import PageContainer from '@/components/PageContainer'
 import { motion } from 'framer-motion'
+import Head from 'next/head'
 import { useState } from 'react'
 import bgImageDesktop from '~/assets/home/background-home-desktop.jpg'
 import bgImageTablet from '~/assets/home/background-home-tablet.jpg'
@@ -13,6 +14,10 @@ export default function Home() {
 
   return (
     <>
+      <Head>
+        <title>Space tourism website | Main page</title>
+        <meta property='og:title' content='Space tourism website | Main page' key='title' />
+      </Head>
       <PageContainer additionalClassNames='px-6'>
         <div
           className='flex flex-col justify-end mx-auto
