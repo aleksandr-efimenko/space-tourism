@@ -2,10 +2,11 @@
 
 This is a solution to the [Space tourism website challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/space-tourism-multipage-website-gRWj1URZ3).
 
+Live Site URL: [https://space-tourism-website-frontendmentor-zeta.vercel.app](https://space-tourism-website-frontendmentor-zeta.vercel.app)
+
 ## Table of contents
 
 - [Overview](#overview)
-  - [Links](#links)
   - [The challenge](#the-challenge)
   - [Screenshot](#screenshot)
 - [My process](#my-process)
@@ -16,11 +17,6 @@ This is a solution to the [Space tourism website challenge on Frontend Mentor](h
 ## Overview
 
 This is a website for a space tourism company. It has 3 pages: home, destinations and about. The home page has a slider with 3 slides. The destinations page has a list of destinations. The about page has a list of team members.
-
-### Links
-
-- Solution URL: [https://github.com/aleksandr-efimenko/space-tourism-website-frontendmentor](https://github.com/aleksandr-efimenko/space-tourism-website-frontendmentor)
-- Live Site URL: [https://space-tourism-website-frontendmentor-zeta.vercel.app/](https://space-tourism-website-frontendmentor-zeta.vercel.app/)
 
 ### The challenge
 
