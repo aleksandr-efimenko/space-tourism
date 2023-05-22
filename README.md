@@ -32,7 +32,7 @@ Users should be able to:
 
 ### Video Walkthrough
 
-https://github.com/aleksandr-efimenko/space-tourism-website-frontendmentor/blob/7dcb2b4dece3538328d5c646bb7a15e003f82c13/public/about/Video%20Walkthrough.mp4
+https://github.com/aleksandr-efimenko/space-tourism-website-frontendmentor/assets/10911832/18e8632d-191f-44b5-a587-8f29d90d9ddb
 
 ### Screenshots
 
