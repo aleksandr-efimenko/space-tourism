@@ -9,6 +9,7 @@ import { BackgroundImage } from '@/components/BackgroundImage'
 import bgImageDesktop from '~/assets/destination/background-destination-desktop.jpg'
 import bgImageTablet from '~/assets/destination/background-destination-tablet.jpg'
 import { useInterval } from '@/utils/useInterval'
+import Head from 'next/head'
 
 export default function Destination() {
   const { destinations } = data
@@ -34,6 +35,10 @@ export default function Destination() {
 
   return (
     <>
+      <Head>
+        <title>Space tourism website | Destination</title>
+        <meta property='og:title' content='Space tourism website | Destination' key='title' />
+      </Head>
       <PageContainer additionalClassNames='px-6'>
         <PageTitle number='01' title='Pick your destination' />
         <div

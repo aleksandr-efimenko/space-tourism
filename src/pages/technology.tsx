@@ -10,6 +10,7 @@ import bgImageDesktop from '~/assets/technology/background-technology-desktop.jp
 import bgImageTablet from '~/assets/technology/background-technology-tablet.jpg'
 import { useMediaQuery } from 'react-responsive'
 import { useInterval } from '@/utils/useInterval'
+import Head from 'next/head'
 
 export default function Technology() {
   const { technology } = data
@@ -37,6 +38,10 @@ export default function Technology() {
 
   return (
     <>
+      <Head>
+        <title>Space tourism website | Technology</title>
+        <meta property='og:title' content='Space tourism website | Technology' key='title' />
+      </Head>
       <PageContainer>
         <PageTitle number='03' title='Space launch 101' />
         <div

@@ -9,6 +9,7 @@ import { BackgroundImage } from '@/components/BackgroundImage'
 import bgImageDesktop from '~/assets/crew/background-crew-desktop.jpg'
 import bgImageTablet from '~/assets/crew/background-crew-tablet.jpg'
 import { useInterval } from '@/utils/useInterval'
+import Head from 'next/head'
 
 export default function Crew() {
   const { crew } = data
@@ -34,6 +35,10 @@ export default function Crew() {
 
   return (
     <>
+      <Head>
+        <title>Space tourism website | Crew</title>
+        <meta property='og:title' content='Space tourism website | Crew' key='title' />
+      </Head>
       <PageContainer additionalClassNames='px-6'>
         <PageTitle number='02' title='Meet your crew' />
         <div
