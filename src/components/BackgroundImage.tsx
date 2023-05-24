@@ -9,7 +9,7 @@ type BackgroundImageProps = {
 
 export function BackgroundImage({ backgroundImages, alt }: BackgroundImageProps) {
   const isTabletOrMobile = useMediaQuery({ query: '(max-width: 1024px)' })
-  const [backgroundImage, setBackgroundImages] = useState<StaticImageData>(backgroundImages.desktop)
+  const [backgroundImage, setBackgroundImages] = useState<StaticImageData | undefined>(undefined)
   useEffect(() => {
     if (isTabletOrMobile) {
       setBackgroundImages(backgroundImages.mobile)
