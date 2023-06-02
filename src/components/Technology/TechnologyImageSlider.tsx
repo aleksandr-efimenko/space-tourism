@@ -1,7 +1,7 @@
 import { Technology } from '@/data/dataTypes'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
-import { use, useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 
 export type TechnologyImageSliderProps = {
   images: Technology['images']
@@ -16,7 +16,7 @@ export type TechnologyImageSliderSettings = {
   animate: { x: string; y: string; opacity: number }
 }
 
-export default function TechnologyImageSlider({ images, imageType, className }: TechnologyImageSliderProps) {
+export function TechnologyImageSlider({ images, imageType, className }: TechnologyImageSliderProps) {
   const [isLoading, setLoading] = useState(true)
   const [loadedImages, setLoadedImages] = useState<string[]>([])
   const [settings, setSettings] = useState<TechnologyImageSliderSettings>({

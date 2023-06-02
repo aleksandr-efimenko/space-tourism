@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion'
 import { Crew } from '@/data/dataTypes'
 
-export default function CrewInfo({ crewMember }: { crewMember: Crew }) {
+export function CrewInfo({ crewMember }: { crewMember: Crew }) {
   return (
     <>
       <motion.p

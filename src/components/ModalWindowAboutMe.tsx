@@ -3,7 +3,7 @@ import Image from 'next/image'
 import closeIcon from '~/assets/shared/icon-close.svg'
 import { AnimatePresence, motion } from 'framer-motion'
 
-export default function ModalWindowAboutMe({
+export function ModalWindowAboutMe({
   isModalOpen,
   setIsModalOpen,
 }: {

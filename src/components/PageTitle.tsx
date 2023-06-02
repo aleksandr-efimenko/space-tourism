@@ -3,7 +3,7 @@ export type PageTitleProps = {
   title: string
 }
 
-export default function PageTitle({ number, title }: PageTitleProps) {
+export function PageTitle({ number, title }: PageTitleProps) {
   return (
     <div className='row-start-1 row-end-2 lg:col-start-2 lg:col-end-10 lg:row-start-auto '>
       <h1

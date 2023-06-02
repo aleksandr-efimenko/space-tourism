@@ -3,7 +3,7 @@ export type PageContainerProps = {
   additionalClassNames?: string
 }
 
-export default function PageContainer({ children, additionalClassNames }: PageContainerProps) {
+export function PageContainer({ children, additionalClassNames }: PageContainerProps) {
   return (
     <div
       className={`min-height-100vh w-full text-center grid 

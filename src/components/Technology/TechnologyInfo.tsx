@@ -1,7 +1,7 @@
 import { Technology } from '@/data/dataTypes'
 import { motion } from 'framer-motion'
 
-export default function TechnologyInfo({ technology }: { technology: Technology }) {
+export function TechnologyInfo({ technology }: { technology: Technology }) {
   return (
     <>
       <motion.p

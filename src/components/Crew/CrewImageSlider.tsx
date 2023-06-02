@@ -1,9 +1,9 @@
 import Image from 'next/image'
 import { motion } from 'framer-motion'
 import { Crew } from '@/data/dataTypes'
-import { use, useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 
-export default function CrewImageSlider({ crewMember }: { crewMember: Crew }) {
+export function CrewImageSlider({ crewMember }: { crewMember: Crew }) {
   const [isLoading, setLoading] = useState(true)
   const [loadedImages, setLoadedImages] = useState<string[]>([])
   useEffect(() => {

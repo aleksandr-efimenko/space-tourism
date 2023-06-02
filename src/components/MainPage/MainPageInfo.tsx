@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 
-export default function MainPageInfo() {
+export function MainPageInfo() {
   return (
     <>
       <motion.p

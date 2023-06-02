@@ -5,7 +5,7 @@ import hamburgerIcon from '~/assets/shared/icon-hamburger.svg'
 import { useRouter } from 'next/router'
 import { bellefair, barlowCondensed, barlow } from '@/styles/fonts'
 import { MainMenuDesktop } from '@/components/MainMenu/MainMenuDesktop'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import { MainMenuMobile } from './MainMenu/MainMenuMobile'
 
 export function Layout({ children }: { children: React.ReactNode }) {
