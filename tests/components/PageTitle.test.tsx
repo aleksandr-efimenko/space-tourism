@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react'
-import { PageTitle } from './PageTitle'
+import { PageTitle } from '@/components/PageTitle'
 
 describe('PageTitle', () => {
   test('renders the number and title', () => {
