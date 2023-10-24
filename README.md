@@ -16,7 +16,7 @@ Live Site URL: [https://space-tourism-website-frontendmentor-zeta.vercel.app](ht
 
 ## Overview
 
-This is a website for a space tourism company. It has 3 pages: home, destinations and about. The home page has a slider with 3 slides. The destinations page has a list of destinations. The about page has a list of team members.
+This is a website for a fictional space tourism company. It has 3 pages: home, destinations and about. The home page has a slider with 3 slides. The destinations page has a list of destinations. The about page has a list of team members.
 
 ### The challenge
 
